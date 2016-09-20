@@ -1,0 +1,6 @@
+framework module Pods_GWENT_Builder {
+  umbrella header "Pods-GWENT-Builder-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_gwentBusiness {
+  umbrella header "Pods-gwentBusiness-umbrella.h"
+
+  export *
+  module * { export * }
+}

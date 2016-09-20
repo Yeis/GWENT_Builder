@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CAAB6CE4D10B50B48E1A3C9 /* Pods_GWENT_Builder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */; };
+		B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951DE1D90437F00B0C125 /* AppDelegate.swift */; };
+		B10951E11D90437F00B0C125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951E01D90437F00B0C125 /* ViewController.swift */; };
+		B10951E41D90437F00B0C125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10951E21D90437F00B0C125 /* Main.storyboard */; };
+		B10951E71D90437F00B0C125 /* GWENT_Builder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B10951E51D90437F00B0C125 /* GWENT_Builder.xcdatamodeld */; };
+		B10951EC1D90437F00B0C125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10951EA1D90437F00B0C125 /* LaunchScreen.storyboard */; };
+		B10951F71D90437F00B0C125 /* GWENT_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951F61D90437F00B0C125 /* GWENT_BuilderTests.swift */; };
+		B10952021D90437F00B0C125 /* GWENT_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10952011D90437F00B0C125 /* GWENT_BuilderUITests.swift */; };
+		B15E15EE1D90A9BE00130814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15E15ED1D90A9BE00130814 /* Assets.xcassets */; };
+		B15E15F01D90ACD400130814 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E15EF1D90ACD400130814 /* HomeController.swift */; };
+		B15E15F61D90B2AE00130814 /* gwentBusiness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B15E16021D91CAC000130814 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E16011D91CAC000130814 /* SessionController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B10951F31D90437F00B0C125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B10951D31D90437F00B0C125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10951DA1D90437F00B0C125;
+			remoteInfo = "GWENT-Builder";
+		};
+		B10951FE1D90437F00B0C125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B10951D31D90437F00B0C125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10951DA1D90437F00B0C125;
+			remoteInfo = "GWENT-Builder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B15E15F71D90B2AE00130814 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B15E15F61D90B2AE00130814 /* gwentBusiness.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F118F4C2A3CE86E004221AB /* Pods_GWENT_BuilderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_BuilderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C92961926258F7B0E3F4FB /* Pods_GWENT_BuilderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_BuilderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB4F100A767D215D9221B65 /* Pods-GWENT-Builder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.debug.xcconfig"; sourceTree = "<group>"; };
+		961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_Builder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9757A504546C0B1F259C65CF /* Pods-GWENT-Builder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.release.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.release.xcconfig"; sourceTree = "<group>"; };
+		B10951DB1D90437F00B0C125 /* GWENT-Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GWENT-Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10951DE1D90437F00B0C125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B10951E01D90437F00B0C125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B10951E31D90437F00B0C125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B10951E61D90437F00B0C125 /* GWENT_Builder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GWENT_Builder.xcdatamodel; sourceTree = "<group>"; };
+		B10951EB1D90437F00B0C125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B10951ED1D90437F00B0C125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10951F21D90437F00B0C125 /* GWENT-BuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GWENT-BuilderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10951F61D90437F00B0C125 /* GWENT_BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWENT_BuilderTests.swift; sourceTree = "<group>"; };
+		B10951F81D90437F00B0C125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10951FD1D90437F00B0C125 /* GWENT-BuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GWENT-BuilderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10952011D90437F00B0C125 /* GWENT_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWENT_BuilderUITests.swift; sourceTree = "<group>"; };
+		B10952031D90437F00B0C125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B15E15ED1D90A9BE00130814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B15E15EF1D90ACD400130814 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = ../HomeController.swift; sourceTree = "<group>"; };
+		B15E15F21D90AD8600130814 /* gwentBusiness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gwentBusiness.framework; path = "gwentBusiness/build/Debug-iphoneos/gwentBusiness.framework"; sourceTree = "<group>"; };
+		B15E15F41D90B2AE00130814 /* gwentBusiness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = gwentBusiness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15E15FC1D919E5100130814 /* Pods_GWENT_BuilderUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_GWENT_BuilderUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_GWENT_BuilderUITests.framework"; sourceTree = "<group>"; };
+		B15E16011D91CAC000130814 /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B10951D81D90437F00B0C125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CAAB6CE4D10B50B48E1A3C9 /* Pods_GWENT_Builder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10951EF1D90437F00B0C125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10951FA1D90437F00B0C125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B10951D21D90437F00B0C125 = {
+			isa = PBXGroup;
+			children = (
+				B15E16001D91CAB200130814 /* Session */,
+				B15E15F41D90B2AE00130814 /* gwentBusiness.framework */,
+				B10951DD1D90437F00B0C125 /* GWENT-Builder */,
+				B10951F51D90437F00B0C125 /* GWENT-BuilderTests */,
+				B10952001D90437F00B0C125 /* GWENT-BuilderUITests */,
+				B10951DC1D90437F00B0C125 /* Products */,
+				FAB296569DC3E4B2B195F11B /* Pods */,
+				D0C11550E3237626855FE913 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B10951DC1D90437F00B0C125 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10951DB1D90437F00B0C125 /* GWENT-Builder.app */,
+				B10951F21D90437F00B0C125 /* GWENT-BuilderTests.xctest */,
+				B10951FD1D90437F00B0C125 /* GWENT-BuilderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B10951DD1D90437F00B0C125 /* GWENT-Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B15E15F11D90ACDE00130814 /* ViewControllers */,
+				B15E15ED1D90A9BE00130814 /* Assets.xcassets */,
+				B10951DE1D90437F00B0C125 /* AppDelegate.swift */,
+				B10951E21D90437F00B0C125 /* Main.storyboard */,
+				B10951EA1D90437F00B0C125 /* LaunchScreen.storyboard */,
+				B10951ED1D90437F00B0C125 /* Info.plist */,
+				B10951E51D90437F00B0C125 /* GWENT_Builder.xcdatamodeld */,
+			);
+			path = "GWENT-Builder";
+			sourceTree = "<group>";
+		};
+		B10951F51D90437F00B0C125 /* GWENT-BuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				B10951F61D90437F00B0C125 /* GWENT_BuilderTests.swift */,
+				B10951F81D90437F00B0C125 /* Info.plist */,
+			);
+			path = "GWENT-BuilderTests";
+			sourceTree = "<group>";
+		};
+		B10952001D90437F00B0C125 /* GWENT-BuilderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B10952011D90437F00B0C125 /* GWENT_BuilderUITests.swift */,
+				B10952031D90437F00B0C125 /* Info.plist */,
+			);
+			path = "GWENT-BuilderUITests";
+			sourceTree = "<group>";
+		};
+		B15E15F11D90ACDE00130814 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B10951E01D90437F00B0C125 /* ViewController.swift */,
+				B15E15EF1D90ACD400130814 /* HomeController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B15E16001D91CAB200130814 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				B15E16011D91CAC000130814 /* SessionController.swift */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
+		D0C11550E3237626855FE913 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B15E15FC1D919E5100130814 /* Pods_GWENT_BuilderUITests.framework */,
+				B15E15F21D90AD8600130814 /* gwentBusiness.framework */,
+				961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */,
+				29C92961926258F7B0E3F4FB /* Pods_GWENT_BuilderTests.framework */,
+				1F118F4C2A3CE86E004221AB /* Pods_GWENT_BuilderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAB296569DC3E4B2B195F11B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AB4F100A767D215D9221B65 /* Pods-GWENT-Builder.debug.xcconfig */,
+				9757A504546C0B1F259C65CF /* Pods-GWENT-Builder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B10951DA1D90437F00B0C125 /* GWENT-Builder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10952061D90437F00B0C125 /* Build configuration list for PBXNativeTarget "GWENT-Builder" */;
+			buildPhases = (
+				AA9122A078174F71DD44FC83 /* [CP] Check Pods Manifest.lock */,
+				B10951D81D90437F00B0C125 /* Frameworks */,
+				B10951D71D90437F00B0C125 /* Sources */,
+				B10951D91D90437F00B0C125 /* Resources */,
+				560F242FF7B26E9CBD613E92 /* [CP] Embed Pods Frameworks */,
+				30FC20A0D8F702B7265DB126 /* [CP] Copy Pods Resources */,
+				B15E15F71D90B2AE00130814 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GWENT-Builder";
+			productName = "GWENT-Builder";
+			productReference = B10951DB1D90437F00B0C125 /* GWENT-Builder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B10951F11D90437F00B0C125 /* GWENT-BuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10952091D90437F00B0C125 /* Build configuration list for PBXNativeTarget "GWENT-BuilderTests" */;
+			buildPhases = (
+				B10951EE1D90437F00B0C125 /* Sources */,
+				B10951EF1D90437F00B0C125 /* Frameworks */,
+				B10951F01D90437F00B0C125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B10951F41D90437F00B0C125 /* PBXTargetDependency */,
+			);
+			name = "GWENT-BuilderTests";
+			productName = "GWENT-BuilderTests";
+			productReference = B10951F21D90437F00B0C125 /* GWENT-BuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B10951FC1D90437F00B0C125 /* GWENT-BuilderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B109520C1D90437F00B0C125 /* Build configuration list for PBXNativeTarget "GWENT-BuilderUITests" */;
+			buildPhases = (
+				B10951F91D90437F00B0C125 /* Sources */,
+				B10951FA1D90437F00B0C125 /* Frameworks */,
+				B10951FB1D90437F00B0C125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B10951FF1D90437F00B0C125 /* PBXTargetDependency */,
+			);
+			name = "GWENT-BuilderUITests";
+			productName = "GWENT-BuilderUITests";
+			productReference = B10951FD1D90437F00B0C125 /* GWENT-BuilderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B10951D31D90437F00B0C125 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jose Carlos";
+				TargetAttributes = {
+					B10951DA1D90437F00B0C125 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4452ZJWN9H;
+						LastSwiftMigration = 0800;
+					};
+					B10951F11D90437F00B0C125 = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
+						TestTargetID = B10951DA1D90437F00B0C125;
+					};
+					B10951FC1D90437F00B0C125 = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
+						TestTargetID = B10951DA1D90437F00B0C125;
+					};
+				};
+			};
+			buildConfigurationList = B10951D61D90437F00B0C125 /* Build configuration list for PBXProject "GWENT-Builder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B10951D21D90437F00B0C125;
+			productRefGroup = B10951DC1D90437F00B0C125 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B10951DA1D90437F00B0C125 /* GWENT-Builder */,
+				B10951F11D90437F00B0C125 /* GWENT-BuilderTests */,
+				B10951FC1D90437F00B0C125 /* GWENT-BuilderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B10951D91D90437F00B0C125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10951EC1D90437F00B0C125 /* LaunchScreen.storyboard in Resources */,
+				B15E15EE1D90A9BE00130814 /* Assets.xcassets in Resources */,
+				B10951E41D90437F00B0C125 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10951F01D90437F00B0C125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10951FB1D90437F00B0C125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30FC20A0D8F702B7265DB126 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		560F242FF7B26E9CBD613E92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA9122A078174F71DD44FC83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B10951D71D90437F00B0C125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B15E15F01D90ACD400130814 /* HomeController.swift in Sources */,
+				B10951E71D90437F00B0C125 /* GWENT_Builder.xcdatamodeld in Sources */,
+				B10951E11D90437F00B0C125 /* ViewController.swift in Sources */,
+				B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */,
+				B15E16021D91CAC000130814 /* SessionController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10951EE1D90437F00B0C125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10951F71D90437F00B0C125 /* GWENT_BuilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10951F91D90437F00B0C125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10952021D90437F00B0C125 /* GWENT_BuilderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B10951F41D90437F00B0C125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10951DA1D90437F00B0C125 /* GWENT-Builder */;
+			targetProxy = B10951F31D90437F00B0C125 /* PBXContainerItemProxy */;
+		};
+		B10951FF1D90437F00B0C125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10951DA1D90437F00B0C125 /* GWENT-Builder */;
+			targetProxy = B10951FE1D90437F00B0C125 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B10951E21D90437F00B0C125 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B10951E31D90437F00B0C125 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B10951EA1D90437F00B0C125 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B10951EB1D90437F00B0C125 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B10952041D90437F00B0C125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B10952051D90437F00B0C125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B10952071D90437F00B0C125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB4F100A767D215D9221B65 /* Pods-GWENT-Builder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4452ZJWN9H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/gwentBusiness/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "GWENT-Builder/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yeis-Corp.GWENT-Builder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B10952081D90437F00B0C125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9757A504546C0B1F259C65CF /* Pods-GWENT-Builder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4452ZJWN9H;
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/gwentBusiness/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "GWENT-Builder/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yeis-Corp.GWENT-Builder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B109520A1D90437F00B0C125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "GWENT-BuilderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yeis-Corp.GWENT-BuilderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GWENT-Builder.app/GWENT-Builder";
+			};
+			name = Debug;
+		};
+		B109520B1D90437F00B0C125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "GWENT-BuilderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yeis-Corp.GWENT-BuilderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GWENT-Builder.app/GWENT-Builder";
+			};
+			name = Release;
+		};
+		B109520D1D90437F00B0C125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "GWENT-BuilderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yeis-Corp.GWENT-BuilderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "GWENT-Builder";
+			};
+			name = Debug;
+		};
+		B109520E1D90437F00B0C125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "GWENT-BuilderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yeis-Corp.GWENT-BuilderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "GWENT-Builder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B10951D61D90437F00B0C125 /* Build configuration list for PBXProject "GWENT-Builder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10952041D90437F00B0C125 /* Debug */,
+				B10952051D90437F00B0C125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10952061D90437F00B0C125 /* Build configuration list for PBXNativeTarget "GWENT-Builder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10952071D90437F00B0C125 /* Debug */,
+				B10952081D90437F00B0C125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10952091D90437F00B0C125 /* Build configuration list for PBXNativeTarget "GWENT-BuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B109520A1D90437F00B0C125 /* Debug */,
+				B109520B1D90437F00B0C125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B109520C1D90437F00B0C125 /* Build configuration list for PBXNativeTarget "GWENT-BuilderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B109520D1D90437F00B0C125 /* Debug */,
+				B109520E1D90437F00B0C125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B10951E51D90437F00B0C125 /* GWENT_Builder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B10951E61D90437F00B0C125 /* GWENT_Builder.xcdatamodel */,
+			);
+			currentVersion = B10951E61D90437F00B0C125 /* GWENT_Builder.xcdatamodel */;
+			path = GWENT_Builder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B10951D31D90437F00B0C125 /* Project object */;
+}
