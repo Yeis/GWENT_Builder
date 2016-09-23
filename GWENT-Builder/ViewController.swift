@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import CoreData
+import gwentBusiness
 class ViewController: UIViewController {
 
+    var users = [NSManagedObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +23,9 @@ class ViewController: UIViewController {
     }
 
 
+    
+    //MARK: Core Data Functions
+  
+  
 }
 

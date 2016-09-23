@@ -8,14 +8,17 @@
 
 import Foundation
 import UIKit
-
-
+import SwiftyJSON
+import gwentBusiness
 class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //SessionController.sharedInstance.REST.getCard(name: "alchemist")
+        let data = GWENT_Data()
+      // data.saveCard(card: Card(_name : "alchemist" , _artwork: "Assets.xcassets/alchemist.imageset/alchemist.png"))
+      //  data.deleteCards()
         
     }
     
@@ -26,7 +29,7 @@ class HomeController: UIViewController {
     
     @IBAction func btnTestPressed(_ sender: AnyObject)
     {
-         SessionController.sharedInstance.REST.getCard(name: "alchemist")
+         SessionController.sharedInstance.REST.getCard(name: "alchemist" , callback: CallBackCardOfTheDay)
     }
     func loadButtons()
     {
@@ -39,6 +42,10 @@ class HomeController: UIViewController {
     }
     
 
+    func CallBackCardOfTheDay(json:JSON)
+    {
+        
+    }
     func BtnPressed()
     {
        print("Working")

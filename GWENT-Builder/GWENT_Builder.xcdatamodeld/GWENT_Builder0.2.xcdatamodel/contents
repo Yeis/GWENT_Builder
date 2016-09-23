@@ -13,7 +13,7 @@
     </entity>
     <elements>
         <element name="Card" positionX="-209" positionY="-27" width="128" height="73"/>
-        <element name="Deck" positionX="-54" positionY="9" width="128" height="75"/>
-        <element name="User" positionX="-117" positionY="27" width="128" height="60"/>
+        <element name="Deck" positionX="-54" positionY="9" width="128" height="73"/>
+        <element name="User" positionX="-198" positionY="147" width="128" height="60"/>
     </elements>
 </model>

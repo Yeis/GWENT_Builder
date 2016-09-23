@@ -1,31 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TG2-Kq-hbC">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Card Finder-->
         <scene sceneID="E0l-tX-PF8">
             <objects>
-                <viewController id="R6Y-Br-Y81" sceneMemberID="viewController">
+                <viewController id="R6Y-Br-Y81" customClass="CardFinderController" customModule="GWENT_Builder" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GL2-LW-iT5"/>
                         <viewControllerLayoutGuide type="bottom" id="O8i-Fc-p4r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q3F-Dr-TfO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-Ln-gRk">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LIW-xK-mwZ">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="edc-uV-Evh">
+                                    <size key="itemSize" width="172" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8aL-Rv-G4j" customClass="CardViewCell" customModule="GWENT_Builder">
+                                        <rect key="frame" x="0.0" y="0.0" width="143.5" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="143.5" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="143.5" height="180"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O8i-Fc-p4r" firstAttribute="top" secondItem="LIW-xK-mwZ" secondAttribute="bottom" constant="8" id="B7S-Qy-kao"/>
+                            <constraint firstItem="LIW-xK-mwZ" firstAttribute="top" secondItem="HbH-Ln-gRk" secondAttribute="bottom" constant="12" id="Tz7-MB-YuB"/>
+                            <constraint firstItem="LIW-xK-mwZ" firstAttribute="leading" secondItem="q3F-Dr-TfO" secondAttribute="leading" constant="16" id="Xvd-ad-jTy"/>
+                            <constraint firstItem="HbH-Ln-gRk" firstAttribute="leading" secondItem="q3F-Dr-TfO" secondAttribute="leading" id="ft2-pT-ipo"/>
+                            <constraint firstAttribute="trailing" secondItem="HbH-Ln-gRk" secondAttribute="trailing" id="kKw-25-83l"/>
+                            <constraint firstAttribute="trailing" secondItem="LIW-xK-mwZ" secondAttribute="trailing" constant="15" id="qZ9-ma-leN"/>
+                            <constraint firstItem="HbH-Ln-gRk" firstAttribute="top" secondItem="GL2-LW-iT5" secondAttribute="bottom" id="vRI-N7-REu"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yNJ-Hf-gef"/>
+                    <tabBarItem key="tabBarItem" title="Card Finder" id="yNJ-Hf-gef"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LIW-xK-mwZ" id="k3V-fQ-W5b"/>
+                        <outlet property="searchBar" destination="HbH-Ln-gRk" id="0P6-S3-Qpd"/>
+                        <outlet property="searchDisplayController" destination="49w-5y-Eb7" id="4X9-DX-PzM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HX-2Y-8Td" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="49w-5y-Eb7">
+                    <connections>
+                        <outlet property="delegate" destination="R6Y-Br-Y81" id="xxu-Nx-B53"/>
+                        <outlet property="searchContentsController" destination="R6Y-Br-Y81" id="m32-7Z-Ppw"/>
+                        <outlet property="searchResultsDataSource" destination="R6Y-Br-Y81" id="w5H-lf-BZD"/>
+                        <outlet property="searchResultsDelegate" destination="R6Y-Br-Y81" id="KDN-Xo-dDQ"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="203" y="212"/>
+            <point key="canvasLocation" x="202.40000000000001" y="210.94452773613196"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="55h-xd-Ssv">
             <objects>
                 <viewController id="dKQ-Ct-zU6" sceneMemberID="viewController">
@@ -34,18 +83,18 @@
                         <viewControllerLayoutGuide type="bottom" id="yoy-k5-7Lp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KtN-Lr-cWz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sBJ-kG-x80"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="sBJ-kG-x80"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XsK-Pb-dVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-162" y="-898"/>
         </scene>
-        <!--Card Finder-->
+        <!--Home-->
         <scene sceneID="qYW-Fs-P31">
             <objects>
                 <viewController id="aXH-pT-mI1" customClass="HomeController" customModule="GWENT_Builder" sceneMemberID="viewController">
@@ -54,25 +103,75 @@
                         <viewControllerLayoutGuide type="bottom" id="Kfw-lf-cuO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jD0-VY-qHh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhW-p3-RMd">
-                                <frame key="frameInset" minX="174" minY="402" width="88" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test"/>
-                                <connections>
-                                    <action selector="btnTestPressed:" destination="aXH-pT-mI1" eventType="touchUpInside" id="gLt-dV-t6A"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zbl-06-hIs">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zbl-06-hIs" secondAttribute="height" multiplier="121:190" id="BV6-qU-pHK">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="-5.678947368421035"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BV6-qU-pHK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="BV6-qU-pHK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wolo of the Day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5k-h2-VdC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jT7-Iz-2B3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vvvvvv" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be5-q2-aF2">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.87156661184210527" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87156661184210527" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zbl-06-hIs" firstAttribute="top" secondItem="Paz-Lp-VOV" secondAttribute="bottom" constant="8" symbolic="YES" id="631-9v-5Vv"/>
+                            <constraint firstItem="S5k-h2-VdC" firstAttribute="top" secondItem="Zbl-06-hIs" secondAttribute="top" id="A4P-3U-aw0"/>
+                            <constraint firstItem="S5k-h2-VdC" firstAttribute="trailing" secondItem="jD0-VY-qHh" secondAttribute="trailingMargin" id="Enw-hl-Tm9"/>
+                            <constraint firstItem="S5k-h2-VdC" firstAttribute="leading" secondItem="Zbl-06-hIs" secondAttribute="trailing" constant="40" id="FSI-m3-zDN"/>
+                            <constraint firstItem="Kfw-lf-cuO" firstAttribute="top" secondItem="Zbl-06-hIs" secondAttribute="bottom" constant="301" id="Nx4-DZ-93Z">
+                                <variation key="heightClass=regular-widthClass=compact" constant="333"/>
+                            </constraint>
+                            <constraint firstItem="be5-q2-aF2" firstAttribute="leading" secondItem="Zbl-06-hIs" secondAttribute="trailing" constant="40" id="O3X-KD-20P"/>
+                            <constraint firstItem="be5-q2-aF2" firstAttribute="top" secondItem="S5k-h2-VdC" secondAttribute="bottom" constant="19" id="PNl-MI-9Bw"/>
+                            <constraint firstItem="Zbl-06-hIs" firstAttribute="leading" secondItem="jD0-VY-qHh" secondAttribute="leadingMargin" id="Vs1-Rg-bRO"/>
+                            <constraint firstItem="Kfw-lf-cuO" firstAttribute="top" secondItem="be5-q2-aF2" secondAttribute="bottom" constant="333" id="pWR-9L-Jqj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="be5-q2-aF2" secondAttribute="trailing" constant="1" id="tAL-rI-YJR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="631-9v-5Vv"/>
+                                <exclude reference="Vs1-Rg-bRO"/>
+                                <exclude reference="Nx4-DZ-93Z"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="631-9v-5Vv"/>
+                                <include reference="Vs1-Rg-bRO"/>
+                                <include reference="Nx4-DZ-93Z"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Card Finder" id="BRW-IW-Gyw"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="BRW-IW-Gyw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUZ-qi-Rfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="-508.69565217391306"/>
+            <point key="canvasLocation" x="864.375" y="-512.32394366197184"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Y89-Xj-8tq">

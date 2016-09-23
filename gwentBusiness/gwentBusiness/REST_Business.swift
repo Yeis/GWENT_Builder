@@ -23,18 +23,33 @@ public class REST_Business
         configuration.timeoutIntervalForResource = 10
         self.alamoFireManager = Alamofire.SessionManager(configuration: configuration)
     }
-    public func getCard( name:String)
+    public func getCard( name:String , callback: ((JSON)->Void)?)
     {
      
-        self.alamoFireManager?.request("https://api.gwentapi.com/v0/cards/" + name ).responseJSON(completionHandler: { (data) in
-            debugPrint(data)
-            
-            })
+        self.alamoFireManager?.request("https://api.gwentapi.com/v0/cards/" + name ).responseJSON{    response  in
+                self.responseCallBack(response: response.response, result: response.result, callBack: callback)
+            }
+    }
+    public func getHref( url:String , callback: ((JSON)->Void)?)
+    {
         
-    
+        self.alamoFireManager?.request(url).responseJSON{    response  in
+            self.responseCallBack(response: response.response, result: response.result, callBack: callback)
+        }
+    }
+    public func getAllCards(callback: ((JSON)->Void)?)
+    {
+        
+        self.alamoFireManager?.request("https://api.gwentapi.com/v0/cards/?limit=95" ).responseJSON{    response  in
+            self.responseCallBack(response: response.response, result: response.result, callBack: callback)
+        }
     }
     
-    public func responseCallBack(response: HTTPURLResponse?, result:Result<AnyObject> , callBack:(()->Void)?)
+    
+    
+    
+    
+    public func responseCallBack(response: HTTPURLResponse?, result:Result<Any> , callBack:((JSON)->Void)?)
     {
         if response != nil
         {
@@ -44,6 +59,7 @@ public class REST_Business
                 switch result {
                 case .success(let data):
                     debugPrint(data)
+                    callBack!(JSON(data))
                     break
                 case .failure(let error):
                     debugPrint(error)

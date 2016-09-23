@@ -11,9 +11,9 @@ workspace ‘GWENT-Builder.xcworkspace'
 
 target 'GWENT-Builder' do
     pod 'Alamofire', '~> 4.0'
-    # pod 'SwiftyJSON',
-    #:git => 'https://github.com/SwiftyJSON/SwiftyJSON.git',
-    #:branch => 'swift3'
+     pod 'SwiftyJSON',
+    :git => 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git',
+    :branch => 'swift3'
 end
 
 

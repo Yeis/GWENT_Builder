@@ -13,6 +13,13 @@
 		B15E15E01D909BCF00130814 /* gwentBusiness.h in Headers */ = {isa = PBXBuildFile; fileRef = B15E15D21D909BCF00130814 /* gwentBusiness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B15E15EA1D909F5900130814 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15E91D909F5900130814 /* Alamofire.framework */; };
 		B15E15FF1D91BCF100130814 /* REST_Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E15FE1D91BCF100130814 /* REST_Business.swift */; };
+		B1B1E3DC1D9353A500D6AD63 /* GWENT_JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3DB1D9353A500D6AD63 /* GWENT_JsonParser.swift */; };
+		B1C3622E1D94A713008AB397 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3622D1D94A713008AB397 /* User.swift */; };
+		B1D288AE1D91F630002B1E32 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288AD1D91F630002B1E32 /* Card.swift */; };
+		B1D288B11D91F713002B1E32 /* type.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B01D91F713002B1E32 /* type.swift */; };
+		B1D288B31D91F7DD002B1E32 /* faction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B21D91F7DD002B1E32 /* faction.swift */; };
+		B1D288B51D91F8D9002B1E32 /* rarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B41D91F8D9002B1E32 /* rarity.swift */; };
+		B1D288B71D91F937002B1E32 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B61D91F937002B1E32 /* Glyph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,13 @@
 		B15E15E91D909F5900130814 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/Yeis/Documents/GWENT-Builder/Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<absolute>"; };
 		B15E15EB1D909F5E00130814 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "/Users/Yeis/Documents/GWENT-Builder/Pods/../build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<absolute>"; };
 		B15E15FE1D91BCF100130814 /* REST_Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST_Business.swift; sourceTree = "<group>"; };
+		B1B1E3DB1D9353A500D6AD63 /* GWENT_JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWENT_JsonParser.swift; sourceTree = "<group>"; };
+		B1C3622D1D94A713008AB397 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B1D288AD1D91F630002B1E32 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B1D288B01D91F713002B1E32 /* type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = type.swift; sourceTree = "<group>"; };
+		B1D288B21D91F7DD002B1E32 /* faction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faction.swift; sourceTree = "<group>"; };
+		B1D288B41D91F8D9002B1E32 /* rarity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rarity.swift; sourceTree = "<group>"; };
+		B1D288B61D91F937002B1E32 /* Glyph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
 		BABDAE771B1170AE8F87315D /* Pods-gwentBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gwentBusiness.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-gwentBusiness/Pods-gwentBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,9 +117,12 @@
 		B15E15D11D909BCF00130814 /* gwentBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				B1D288AF1D91F6EC002B1E32 /* Enums */,
+				B1D288AC1D91F622002B1E32 /* Models */,
 				B15E15D21D909BCF00130814 /* gwentBusiness.h */,
 				B15E15D31D909BCF00130814 /* Info.plist */,
 				B15E15FE1D91BCF100130814 /* REST_Business.swift */,
+				B1B1E3DB1D9353A500D6AD63 /* GWENT_JsonParser.swift */,
 			);
 			path = gwentBusiness;
 			sourceTree = "<group>";
@@ -117,6 +134,26 @@
 				B15E15DF1D909BCF00130814 /* Info.plist */,
 			);
 			path = gwentBusinessTests;
+			sourceTree = "<group>";
+		};
+		B1D288AC1D91F622002B1E32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1D288AD1D91F630002B1E32 /* Card.swift */,
+				B1D288B61D91F937002B1E32 /* Glyph.swift */,
+				B1C3622D1D94A713008AB397 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B1D288AF1D91F6EC002B1E32 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B1D288B01D91F713002B1E32 /* type.swift */,
+				B1D288B21D91F7DD002B1E32 /* faction.swift */,
+				B1D288B41D91F8D9002B1E32 /* rarity.swift */,
+			);
+			name = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D288B31D91F7DD002B1E32 /* faction.swift in Sources */,
+				B1D288B51D91F8D9002B1E32 /* rarity.swift in Sources */,
+				B1D288B11D91F713002B1E32 /* type.swift in Sources */,
 				B15E15FF1D91BCF100130814 /* REST_Business.swift in Sources */,
+				B1C3622E1D94A713008AB397 /* User.swift in Sources */,
+				B1D288B71D91F937002B1E32 /* Glyph.swift in Sources */,
+				B1B1E3DC1D9353A500D6AD63 /* GWENT_JsonParser.swift in Sources */,
+				B1D288AE1D91F630002B1E32 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
