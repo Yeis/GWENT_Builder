@@ -16,7 +16,7 @@ class CardViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        lbName = UILabel()
+  
     }
 
 }

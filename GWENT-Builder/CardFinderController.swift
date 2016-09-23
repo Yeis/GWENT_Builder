@@ -69,8 +69,8 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
          cell.frame.size.width = (collectionView.frame.size.width  ) / 2
          cell.frame.size.height = (collectionView.frame.size.height - 2) / 2
         
-         cell.lbName?.text = (Cards[indexPath.item].name)
-         cell.image?.image = UIImage(contentsOfFile:  Cards[indexPath.item].artwork)
+         cell.lbName.text = (Cards[indexPath.item].name)
+         cell.image.image = UIImage(named: Cards[indexPath.item].artwork)
         //debugPrint("cell#" + String(indexPath.item)  )
      //   debugPrint("width: " + String(describing: cell.frame.size.width) )
      //   debugPrint( "height: " + String(describing: cell.frame.size.height))

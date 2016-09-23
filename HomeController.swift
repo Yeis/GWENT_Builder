@@ -17,8 +17,9 @@ class HomeController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //SessionController.sharedInstance.REST.getCard(name: "alchemist")
         let data = GWENT_Data()
-      // data.saveCard(card: Card(_name : "alchemist" , _artwork: "Assets.xcassets/alchemist.imageset/alchemist.png"))
-      //  data.deleteCards()
+       data.deleteCards()
+       data.saveCard(card: Card(_name : "alchemist" , _artwork: "alchemist"))
+
         
     }
     
