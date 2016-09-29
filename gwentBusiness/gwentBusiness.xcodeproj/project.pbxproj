@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9CE1D844E4B2DD43E06AF0C1 /* Pods_gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5432C74E72B27FE5EE1F271A /* Pods_gwentBusiness.framework */; };
+		B133F5471D99BA3F004CE268 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133F5461D99BA3F004CE268 /* Artwork.swift */; };
 		B15E15D91D909BCF00130814 /* gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15CF1D909BCF00130814 /* gwentBusiness.framework */; };
 		B15E15DE1D909BCF00130814 /* gwentBusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E15DD1D909BCF00130814 /* gwentBusinessTests.swift */; };
 		B15E15E01D909BCF00130814 /* gwentBusiness.h in Headers */ = {isa = PBXBuildFile; fileRef = B15E15D21D909BCF00130814 /* gwentBusiness.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		5432C74E72B27FE5EE1F271A /* Pods_gwentBusiness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gwentBusiness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C47952D9DFEA1AF1A1A447 /* Pods-gwentBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gwentBusiness.release.xcconfig"; path = "../Pods/Target Support Files/Pods-gwentBusiness/Pods-gwentBusiness.release.xcconfig"; sourceTree = "<group>"; };
+		B133F5461D99BA3F004CE268 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		B15E15CF1D909BCF00130814 /* gwentBusiness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = gwentBusiness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15E15D21D909BCF00130814 /* gwentBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gwentBusiness.h; sourceTree = "<group>"; };
 		B15E15D31D909BCF00130814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				B1D288AD1D91F630002B1E32 /* Card.swift */,
 				B1D288B61D91F937002B1E32 /* Glyph.swift */,
 				B1C3622D1D94A713008AB397 /* User.swift */,
+				B133F5461D99BA3F004CE268 /* Artwork.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				B1C3622E1D94A713008AB397 /* User.swift in Sources */,
 				B1D288B71D91F937002B1E32 /* Glyph.swift in Sources */,
 				B1B1E3DC1D9353A500D6AD63 /* GWENT_JsonParser.swift in Sources */,
+				B133F5471D99BA3F004CE268 /* Artwork.swift in Sources */,
 				B1D288AE1D91F630002B1E32 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

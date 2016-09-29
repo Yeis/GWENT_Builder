@@ -27,7 +27,7 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.5644329897" green="0.97753226039999996" blue="0.93324572930000005" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.88157894736842102" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="image" destination="Fib-OY-6OM" id="eji-AW-qgw"/>
                 <outlet property="lbName" destination="XOA-0K-ydv" id="hL3-3L-FAp"/>

@@ -80,10 +80,74 @@ public class GWENT_Data
         
         let _card = NSManagedObject(entity: entity!,
                                     insertInto: managedContext)
-        
+     
         //3
+      //guardamos la imagen
+        if card.artwork.count != 0
+        {
+        let artworkEntity = NSEntityDescription.entity(forEntityName: "Artwork", in: managedContext)
+        let _artwork = NSManagedObject(entity: artworkEntity!, insertInto: managedContext)
+        _artwork.setValue(card.artwork[0], forKey: "imagePath")
+        _card.setValue(NSSet(object: _artwork), forKey: "artworks")
+    
+        if card.artwork.count > 1
+        {
+            let artworks = _card.mutableSetValue(forKey: "artworks")
+            for i in 1...(card.artwork.count - 1)
+            {
+                let _artwork = NSManagedObject(entity: artworkEntity!, insertInto: managedContext)
+                _artwork.setValue(card.artwork[i], forKey: "imagePath")
+                artworks.add(_artwork)
+            }
+        }
+        }
+        //guardamos el row
+        if card.rows.count != 0
+        {
+        let rowsEntity = NSEntityDescription.entity(forEntityName: "Row", in: managedContext)
+        let _row = NSManagedObject(entity: rowsEntity!, insertInto: managedContext)
+        _row.setValue(card.rows[0], forKey: "name")
+        _card.setValue(NSSet(object: _row), forKey: "rows")
+        
+        if card.rows.count  > 1
+        {
+            let rows = _card.mutableSetValue(forKey: "rows")
+            for i in 1...(card.rows.count - 1)
+            {
+                let _row = NSManagedObject(entity: rowsEntity!, insertInto: managedContext)
+                _row.setValue(card.rows[i], forKey: "name")
+                rows.add(_row)
+            }
+        }
+        }
+        //guardamos los subtypes
+        if card.subtypes.count != 0
+        {
+        let subtypesEntity = NSEntityDescription.entity(forEntityName: "Subtype", in: managedContext)
+         let _subtype = NSManagedObject(entity: subtypesEntity!, insertInto: managedContext)
+        _subtype.setValue(card.subtypes[0], forKey: "name")
+        _card.setValue(NSSet(object: _subtype), forKey: "subtypes")
+
+        if card.subtypes.count > 1
+        {
+            let subtypes = _card.mutableSetValue(forKey: "subtypes")
+            for i in 1...(card.subtypes.count - 1)
+            {
+                let _subtype = NSManagedObject(entity: subtypesEntity!, insertInto: managedContext)
+                _subtype.setValue(card.subtypes[i], forKey: "name")
+                subtypes.add(_subtype)
+            }
+        }
+        }
+        //add normal parameters
         _card.setValue(card.name , forKey: "name")
-        _card.setValue(card.artwork, forKey: "imagePath")
+        _card.setValue(card.faction, forKey: "faction")
+        _card.setValue(card.rarity, forKey: "rarity")
+        _card.setValue(card.text, forKey: "text")
+        _card.setValue(card.type, forKey: "type")
+
+
+
         do {
             //5
             Cards.append(_card)
@@ -126,5 +190,20 @@ public class GWENT_Data
         }catch{}
     }
     
+    
+    func removeImage(itemName:String, fileExtension: String) {
+        let fileManager = FileManager.default
+        let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
+        let nsUserDomainMask = FileManager.SearchPathDomainMask.userDomainMask
+        let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        guard let dirPath = paths.first else {
+            return
+        }
+        let filePath = "\(dirPath)/\(itemName).\(fileExtension)"
+        do {
+            try fileManager.removeItem(atPath: filePath)
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }}
     
 }

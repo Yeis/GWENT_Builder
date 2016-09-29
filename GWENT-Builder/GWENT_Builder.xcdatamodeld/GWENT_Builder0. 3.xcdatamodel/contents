@@ -2,7 +2,6 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Artwork" syncable="YES">
         <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Card" syncable="YES">
         <attribute name="faction" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,16 +20,18 @@
     <entity name="Row" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Subtype" syncable="YES"/>
+    <entity name="Subtype" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="User" syncable="YES">
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Card" positionX="-209" positionY="-27" width="128" height="163"/>
+        <element name="Artwork" positionX="-108" positionY="99" width="128" height="60"/>
+        <element name="Card" positionX="-209" positionY="-27" width="128" height="165"/>
         <element name="Deck" positionX="-54" positionY="9" width="128" height="73"/>
-        <element name="User" positionX="-198" positionY="147" width="128" height="60"/>
-        <element name="Artwork" positionX="-108" positionY="99" width="128" height="75"/>
         <element name="Row" positionX="-99" positionY="108" width="128" height="60"/>
-        <element name="Subtype" positionX="-90" positionY="117" width="128" height="45"/>
+        <element name="Subtype" positionX="-90" positionY="117" width="128" height="60"/>
+        <element name="User" positionX="-198" positionY="147" width="128" height="60"/>
     </elements>
 </model>

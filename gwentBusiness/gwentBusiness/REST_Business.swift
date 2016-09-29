@@ -37,6 +37,13 @@ public class REST_Business
             self.responseCallBack(response: response.response, result: response.result, callBack: callback)
         }
     }
+    public func getArtwork( url:String , callback: ((JSON , Any)->Void)? , card:Card)
+    {
+        
+        self.alamoFireManager?.request(url).responseJSON{    response  in
+            self.responseCallBackAny(response: response.response, result: response.result, callBack: callback  , object: card)
+        }
+    }
     public func getAllCards(callback: ((JSON)->Void)?)
     {
         
@@ -44,8 +51,16 @@ public class REST_Business
             self.responseCallBack(response: response.response, result: response.result, callBack: callback)
         }
     }
-    
-    
+  
+    public func DownloadImage(url:String , callback:((JSON)->Void)?)
+    {
+        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
+        Alamofire.download(url, to: destination).responseJSON
+            { response in
+                self.responseCallBack(response: response.response, result: response.result, callBack: callback)
+        }
+
+    }
     
     
     
@@ -58,11 +73,11 @@ public class REST_Business
             {
                 switch result {
                 case .success(let data):
-                    debugPrint(data)
+                  //  debugPrint(data)
                     callBack!(JSON(data))
                     break
                 case .failure(let error):
-                    debugPrint(error)
+                   // debugPrint(error)
                     break
                     
                 }
@@ -71,6 +86,31 @@ public class REST_Business
             else if response?.statusCode == 401
             {
               
+            }
+        }
+    }
+    public func responseCallBackAny(response: HTTPURLResponse?, result:Result<Any> , callBack:((JSON, Any)->Void)? , object: Any)
+    {
+        if response != nil
+        {
+            //Success Call
+            if response?.statusCode == 200
+            {
+                switch result {
+                case .success(let data):
+                    //  debugPrint(data)
+                    callBack!(JSON(data) , object)
+                    break
+                case .failure(let error):
+                    // debugPrint(error)
+                    break
+                    
+                }
+            }
+                //Bad Call
+            else if response?.statusCode == 401
+            {
+                
             }
         }
     }
