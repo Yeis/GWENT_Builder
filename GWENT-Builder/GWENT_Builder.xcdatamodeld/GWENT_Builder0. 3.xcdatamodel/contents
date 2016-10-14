@@ -24,7 +24,7 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Row" syncable="YES">
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Subtype" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
