@@ -17,12 +17,11 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
     var FilteredCards:[Card] = [Card]()
     var Objects:[NSManagedObject]!
     var Selected:Int!
+   //  let alert = UIAlertController(title:  "", message: "Fetching Database" , preferredStyle: UIAlertControllerStyle.alert)
     var searchActive:Bool = false
-    var artworkWrapper:String = ""
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
 
-    
      override public func viewDidLoad() {
         super.viewDidLoad()
         //setup of Delegates 
@@ -32,35 +31,24 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
         let nib = UINib(nibName: "CardViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "CardCell")
         
-       
+        
+       // navigationController?.present(alert, animated: true, completion: nil)
+
         
         //load de los objetos en la base de datos
         let data = GWENT_Data()
+        let helper = gwentHelper()
         Objects = data.loadCards()
         for item in Objects
         {
-            let artworkSet = item.mutableSetValue(forKey: "artworks")
-        
-            artworkSet.forEach(procesarArtwork)
-            
-            
-            Cards.append(Card(_name: (item.value(forKey: "name") as? String)! , _cover: artworkWrapper))
-            artworkWrapper = ""
+            Cards.append(helper.getlocalCard(item: item))
         }
        
       
         collectionView.reloadData()
      
     }
-    func procesarArtwork(art:Any)
-    {
-        let _art =  art as! NSManagedObject
-        if artworkWrapper == ""
-        {
-          artworkWrapper  =  _art.value(forKey: "imagePath") as! String!
-        }
-    }
-    public override func viewDidAppear(_ animated: Bool) {
+       public override func viewDidAppear(_ animated: Bool) {
         //Layout de la Coleccion
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
@@ -69,6 +57,7 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
         layout.minimumLineSpacing = 5
         collectionView.collectionViewLayout = layout
         
+        collectionView.reloadData()
         //Debug
 //        debugPrint(collectionView.frame.size.width)
 //        debugPrint((collectionView.frame.size.height ) / 1.5 )
@@ -94,7 +83,11 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
         return Cards.count
     }
 
-    
+    public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+     
+        //    alert.dismiss(animated: true, completion: nil)
+        
+    }
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardViewCell
          cell.frame.size.width = (collectionView.frame.size.width  ) / 2
@@ -135,16 +128,27 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
         print("You selected cell #\(indexPath.item)!")
         Selected = indexPath.item
 
-        performSegue(withIdentifier: "CardViewer", sender: nil)
+       // performSegue(withIdentifier: "OldCardViewer", sender: nil)
+        performSegue(withIdentifier: "NewCardViewer", sender: nil)
+
 
     }
    
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "CardViewer")
+        if(segue.identifier == "NewCardViewer")
         {
-            let svc = segue.destination as! CardViewer
-            svc.card = Cards[Selected]
+            let svc = segue.destination as! NewCardViewer
+            if(searchActive)
+            {
+                svc.card = FilteredCards[Selected]
+
+            }
+            else
+            {
+                svc.card = Cards[Selected]
+
+            }
         }
     }
     

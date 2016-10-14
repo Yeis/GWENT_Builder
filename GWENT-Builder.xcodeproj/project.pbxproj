@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C841E16D704703681251581 /* Pods_GWENT_Builder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */; };
 		B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951DE1D90437F00B0C125 /* AppDelegate.swift */; };
 		B10951E11D90437F00B0C125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951E01D90437F00B0C125 /* ViewController.swift */; };
 		B10951E41D90437F00B0C125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10951E21D90437F00B0C125 /* Main.storyboard */; };
@@ -15,18 +14,20 @@
 		B10951EC1D90437F00B0C125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10951EA1D90437F00B0C125 /* LaunchScreen.storyboard */; };
 		B10951F71D90437F00B0C125 /* GWENT_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951F61D90437F00B0C125 /* GWENT_BuilderTests.swift */; };
 		B10952021D90437F00B0C125 /* GWENT_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10952011D90437F00B0C125 /* GWENT_BuilderUITests.swift */; };
+		B15255811DB176CE00744A82 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15255801DB176CE00744A82 /* SettingsController.swift */; };
+		B15255851DB196AC00744A82 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15255841DB196AC00744A82 /* Reader.swift */; };
 		B15E15EE1D90A9BE00130814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15E15ED1D90A9BE00130814 /* Assets.xcassets */; };
 		B15E15F01D90ACD400130814 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E15EF1D90ACD400130814 /* HomeController.swift */; };
 		B15E16021D91CAC000130814 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E16011D91CAC000130814 /* SessionController.swift */; };
 		B1764CBB1D9B4004003FE5AE /* CardViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1764CBA1D9B4004003FE5AE /* CardViewer.swift */; };
 		B1800F981D9C8FEF001D6D43 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1800F971D9C8FEF001D6D43 /* MessageHandler.swift */; };
+		B1A044791DB0264A00C34A7A /* gwentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A044781DB0264A00C34A7A /* gwentHelper.swift */; };
+		B1A4953E1D9F2110002B5ACE /* NewCardViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */; };
 		B1B1E3BB1D934A6300D6AD63 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3B91D934A6300D6AD63 /* CardViewCell.swift */; };
 		B1B1E3BC1D934A6300D6AD63 /* CardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */; };
 		B1B1E3BE1D934C5C00D6AD63 /* CardFinderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3BD1D934C5C00D6AD63 /* CardFinderController.swift */; };
 		B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; };
 		B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1B1E3D81D9352C600D6AD63 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */; };
-		B1B1E3D91D9352E700D6AD63 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */; };
 		B1B1E3DA1D9352E700D6AD63 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1C3622C1D94A212008AB397 /* alchemist.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C3622B1D94A212008AB397 /* alchemist.png */; };
 		B1C362321D958C65008AB397 /* GWENT_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C362311D958C65008AB397 /* GWENT_Data.swift */; };
@@ -83,6 +84,8 @@
 		B10951FD1D90437F00B0C125 /* GWENT-BuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GWENT-BuilderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10952011D90437F00B0C125 /* GWENT_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWENT_BuilderUITests.swift; sourceTree = "<group>"; };
 		B10952031D90437F00B0C125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B15255801DB176CE00744A82 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		B15255841DB196AC00744A82 /* Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
 		B15E15ED1D90A9BE00130814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B15E15EF1D90ACD400130814 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = ../HomeController.swift; sourceTree = "<group>"; };
 		B15E15F21D90AD8600130814 /* gwentBusiness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gwentBusiness.framework; path = "gwentBusiness/build/Debug-iphoneos/gwentBusiness.framework"; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 		B15E16011D91CAC000130814 /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		B1764CBA1D9B4004003FE5AE /* CardViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewer.swift; sourceTree = "<group>"; };
 		B1800F971D9C8FEF001D6D43 /* MessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
+		B1A044781DB0264A00C34A7A /* gwentHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gwentHelper.swift; sourceTree = "<group>"; };
+		B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCardViewer.swift; sourceTree = "<group>"; };
 		B1B1E3B91D934A6300D6AD63 /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
 		B1B1E3BD1D934C5C00D6AD63 /* CardFinderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFinderController.swift; sourceTree = "<group>"; };
@@ -106,10 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B1E3D91D9352E700D6AD63 /* SwiftyJSON.framework in Frameworks */,
-				B1B1E3D81D9352C600D6AD63 /* SwiftyJSON.framework in Frameworks */,
 				B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */,
-				3C841E16D704703681251581 /* Pods_GWENT_Builder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +159,7 @@
 		B10951DD1D90437F00B0C125 /* GWENT-Builder */ = {
 			isa = PBXGroup;
 			children = (
-				B1C362311D958C65008AB397 /* GWENT_Data.swift */,
+				B1A0447A1DB026CF00C34A7A /* Helpers */,
 				B1C3622A1D94A052008AB397 /* CardImages */,
 				B1B1E3B81D934A3400D6AD63 /* Cells */,
 				B15E15F11D90ACDE00130814 /* ViewControllers */,
@@ -189,9 +191,27 @@
 			path = "GWENT-BuilderUITests";
 			sourceTree = "<group>";
 		};
+		B15255821DB176D400744A82 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B15255801DB176CE00744A82 /* SettingsController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		B15255831DB195DC00744A82 /* InfoReader */ = {
+			isa = PBXGroup;
+			children = (
+				B15255841DB196AC00744A82 /* Reader.swift */,
+			);
+			name = InfoReader;
+			sourceTree = "<group>";
+		};
 		B15E15F11D90ACDE00130814 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B15255831DB195DC00744A82 /* InfoReader */,
+				B15255821DB176D400744A82 /* Settings */,
 				B1B1E3DE1D9439A200D6AD63 /* Main Controllers */,
 				B1B1E3DD1D94399200D6AD63 /* Card Finder */,
 			);
@@ -205,6 +225,15 @@
 				B1800F971D9C8FEF001D6D43 /* MessageHandler.swift */,
 			);
 			name = Session;
+			sourceTree = "<group>";
+		};
+		B1A0447A1DB026CF00C34A7A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B1C362311D958C65008AB397 /* GWENT_Data.swift */,
+				B1A044781DB0264A00C34A7A /* gwentHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		B1B1E3B81D934A3400D6AD63 /* Cells */ = {
@@ -221,6 +250,7 @@
 			children = (
 				B1B1E3BD1D934C5C00D6AD63 /* CardFinderController.swift */,
 				B1764CBA1D9B4004003FE5AE /* CardViewer.swift */,
+				B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */,
 			);
 			name = "Card Finder";
 			sourceTree = "<group>";
@@ -453,10 +483,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15255851DB196AC00744A82 /* Reader.swift in Sources */,
+				B1A4953E1D9F2110002B5ACE /* NewCardViewer.swift in Sources */,
+				B15255811DB176CE00744A82 /* SettingsController.swift in Sources */,
 				B1B1E3BB1D934A6300D6AD63 /* CardViewCell.swift in Sources */,
 				B15E15F01D90ACD400130814 /* HomeController.swift in Sources */,
 				B1800F981D9C8FEF001D6D43 /* MessageHandler.swift in Sources */,
 				B10951E71D90437F00B0C125 /* GWENT_Builder.xcdatamodeld in Sources */,
+				B1A044791DB0264A00C34A7A /* gwentHelper.swift in Sources */,
 				B10951E11D90437F00B0C125 /* ViewController.swift in Sources */,
 				B1764CBB1D9B4004003FE5AE /* CardViewer.swift in Sources */,
 				B1C362321D958C65008AB397 /* GWENT_Data.swift in Sources */,

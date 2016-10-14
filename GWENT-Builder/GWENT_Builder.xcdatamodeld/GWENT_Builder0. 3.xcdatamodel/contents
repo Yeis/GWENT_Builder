@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Artwork" syncable="YES">
         <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -17,8 +17,14 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="New" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Row" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Subtype" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -30,6 +36,7 @@
         <element name="Artwork" positionX="-108" positionY="99" width="128" height="60"/>
         <element name="Card" positionX="-209" positionY="-27" width="128" height="165"/>
         <element name="Deck" positionX="-54" positionY="9" width="128" height="73"/>
+        <element name="New" positionX="-135" positionY="72" width="128" height="105"/>
         <element name="Row" positionX="-99" positionY="108" width="128" height="60"/>
         <element name="Subtype" positionX="-90" positionY="117" width="128" height="60"/>
         <element name="User" positionX="-198" positionY="147" width="128" height="60"/>

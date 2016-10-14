@@ -24,7 +24,7 @@ public class Card
     
     public init(){}
     
-    public init(_name:String  , _artwork:[String] , _faction:String , _rarity:String , _subtypes:[String] , _rows:[String]  ,  _text:String , _type:String)
+    public init(_name:String  , _artwork:[String] , _faction:String , _rarity:String , _subtypes:[String] , _rows:[String]  ,  _text:String , _type:String , _cover:String)
     {
         self.name = _name
         self.artwork = _artwork
@@ -34,6 +34,7 @@ public class Card
         self.rows = _rows
         self.text = _text
         self.type = _type
+        self.cover = _cover
     }
     public init(_name:String , _cover:String)
     {

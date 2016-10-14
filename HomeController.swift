@@ -10,24 +10,44 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import gwentBusiness
+import CoreData
 class HomeController: UIViewController {
     
     
-    
-    
+    @IBOutlet var lbDescription: UILabel!
+    @IBOutlet var lbCardName: UILabel!
     @IBOutlet var cardOfTheDay: UIImageView!
-    var Cards:[Card] = [Card]()
+    var Card:Card!
+    var Objects:[NSManagedObject]!
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setup to change navigationbar 
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
+        self.title = "Home"
+        
+        //get Card of the day
+        let data = GWENT_Data()
+        Objects = data.loadCards()
+        let random = Int(arc4random_uniform(UInt32(Objects.count)))
+        let helper =  gwentHelper()
+        
+        if Objects.count > 0 {
+            Card = helper.getlocalCard(item: Objects[random])
+            cardOfTheDay.image = UIImage(contentsOfFile:  SessionController.sharedInstance.GetImagePath(name: Card.cover))
+            lbCardName.text = Card.name
+            lbDescription.text =  Card.text
+        }
+        
+     
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         //SessionController.sharedInstance.REST.getCard(name: "alchemist")
         //let data = GWENT_Data()
-       // data.deleteCards()
-      // data.saveCard(card: Card(_name : "alchemist" , _artwork: "alchemist"))
-    //  SessionController.sharedInstance.REST.getAllCards(callback: Callback)
+        // data.deleteCards()
+       // data.saveCard(card: Card(_name : "alchemist" , _artwork: "alchemist"))
+       // SessionController.sharedInstance.REST.getAllCards(callback: Callback)
         
         
       
@@ -37,53 +57,15 @@ class HomeController: UIViewController {
         
         //me trae una imagen del document folder
         
-      //let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+     // let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
       // let image  = documentsUrl.appendingPathComponent("blue-stripes-commando_small.png")
-      //  debugPrint(image)
+        //debugPrint(image)
 
-        cardOfTheDay.image = UIImage(contentsOfFile: SessionController.sharedInstance.GetImagePath(name: "blue-stripes-commando_small.png"))
  //UIImage(
 //        SessionControler.sharedInstance.REST.DownloadImage(url: "https://api.gwentapi.com/media/blue-stripes-commando_small.png", callback: callbackDownload)
     
     }
-    func callbackDownload(jsonarray:JSON)
-    {
-        //debugPrint(jsonarray)
-    }
-    func Callback(jsonarray:JSON)
-    {
-        var cantidad :Int = 0
-        for item in jsonarray["results"].arrayValue
-        {
-            if cantidad < 95
-            {
-                cantidad += 1
-                SessionController.sharedInstance.REST.getHref(url: item["href"].stringValue, callback: CallbackHref)
-                
-            }
-        }
-    }
-    func CallbackHref(jsonarray:JSON)
-    {
-        
-        let card = SessionController.sharedInstance.jsonParser.parseCard(json: jsonarray)
-        //todas las cartas ya estan metidas a la lista ahora nos traemos todos los artwork
-       
-        SessionController.sharedInstance.REST.getArtwork(url: jsonarray["artwork"]["href"].stringValue, callback: downloadImages , card: card)
-            debugPrint("Donwloading artwork")
-       
-        
-    }
-    
-    func downloadImages(jsonarray:JSON , object:Any)
-    {
-        let card = object as! Card
-        card.artwork = SessionController.sharedInstance.jsonParser.getArtwork(jsonarray: jsonarray)
-        debugPrint(card)
-       let data = GWENT_Data()
-       data.saveCard(card: card)
-        
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
