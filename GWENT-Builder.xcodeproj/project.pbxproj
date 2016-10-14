@@ -104,6 +104,7 @@
 		B1C362311D958C65008AB397 /* GWENT_Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GWENT_Data.swift; path = gwentBusiness/gwentBusiness/GWENT_Data.swift; sourceTree = SOURCE_ROOT; };
 		B1C362331D959733008AB397 /* GWENT_Builder0.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GWENT_Builder0.2.xcdatamodel; sourceTree = "<group>"; };
 		B1C362341D984789008AB397 /* GWENT_Builder0. 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GWENT_Builder0. 3.xcdatamodel"; sourceTree = "<group>"; };
+		B1EB55B71DB1A18500E8EF3F /* GWENT_Builder0. 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GWENT_Builder0. 4.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -776,11 +777,12 @@
 		B10951E51D90437F00B0C125 /* GWENT_Builder.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				B1EB55B71DB1A18500E8EF3F /* GWENT_Builder0. 4.xcdatamodel */,
 				B1C362341D984789008AB397 /* GWENT_Builder0. 3.xcdatamodel */,
 				B1C362331D959733008AB397 /* GWENT_Builder0.2.xcdatamodel */,
 				B10951E61D90437F00B0C125 /* GWENT_Builder.xcdatamodel */,
 			);
-			currentVersion = B1C362341D984789008AB397 /* GWENT_Builder0. 3.xcdatamodel */;
+			currentVersion = B1EB55B71DB1A18500E8EF3F /* GWENT_Builder0. 4.xcdatamodel */;
 			path = GWENT_Builder.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
