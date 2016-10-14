@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="O8i-Fc-p4r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q3F-Dr-TfO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-Ln-gRk">
@@ -86,7 +86,7 @@
                         <viewControllerLayoutGuide type="bottom" id="S4v-hY-ADr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iPk-mY-DLs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-s4-Zqr">
@@ -195,7 +195,7 @@
                         <viewControllerLayoutGuide type="bottom" id="omR-tD-8Jn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p8A-32-5Oh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pu3-lW-GYt">
@@ -324,7 +324,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yoy-k5-7Lp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KtN-Lr-cWz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-no-auI">
@@ -362,7 +362,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Kfw-lf-cuO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jD0-VY-qHh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zbl-06-hIs">
@@ -382,26 +382,26 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Tuv-x7-xdh">
-                                        <rect key="frame" x="0.0" y="28" width="373" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="342" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tuv-x7-xdh" id="lEL-Uo-VLX">
-                                            <frame key="frameInset" width="373" height="43.5"/>
+                                            <frame key="frameInset" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vyK-bh-wbS">
-                                        <rect key="frame" x="0.0" y="72" width="373" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="342" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vyK-bh-wbS" id="ulW-2M-SUg">
-                                            <frame key="frameInset" width="373" height="43.5"/>
+                                            <frame key="frameInset" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KNp-aX-na8">
-                                        <rect key="frame" x="0.0" y="116" width="373" height="44"/>
+                                        <rect key="frame" x="0.0" y="116" width="342" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KNp-aX-na8" id="Opy-h5-s1O">
-                                            <frame key="frameInset" width="373" height="43.5"/>
+                                            <frame key="frameInset" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -455,7 +455,7 @@
                         <viewControllerLayoutGuide type="bottom" id="j6A-2A-cx9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4WZ-Qj-SeG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WVc-4D-Ved">

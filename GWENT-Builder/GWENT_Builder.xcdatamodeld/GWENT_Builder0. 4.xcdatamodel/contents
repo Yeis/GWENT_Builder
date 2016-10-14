@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Artwork" syncable="YES">
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Card" syncable="YES">
+        <attribute name="faction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rarity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="artworks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artwork" syncable="YES"/>
+        <relationship name="rows" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Row" syncable="YES"/>
+        <relationship name="subtypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subtype" syncable="YES"/>
+    </entity>
+    <entity name="Deck" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="New" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Row" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Subtype" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Artwork" positionX="-108" positionY="99" width="128" height="60"/>
+        <element name="Card" positionX="-209" positionY="-27" width="128" height="165"/>
+        <element name="Deck" positionX="-54" positionY="9" width="128" height="73"/>
+        <element name="New" positionX="-135" positionY="72" width="128" height="105"/>
+        <element name="Row" positionX="-99" positionY="108" width="128" height="60"/>
+        <element name="Subtype" positionX="-90" positionY="117" width="128" height="60"/>
+        <element name="User" positionX="-198" positionY="147" width="128" height="60"/>
+    </elements>
+</model>
