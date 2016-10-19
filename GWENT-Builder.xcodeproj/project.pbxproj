@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */; };
+		7C55F5E51DB1A55100DC55EE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951DE1D90437F00B0C125 /* AppDelegate.swift */; };
 		B10951E11D90437F00B0C125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951E01D90437F00B0C125 /* ViewController.swift */; };
 		B10951E41D90437F00B0C125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10951E21D90437F00B0C125 /* Main.storyboard */; };
@@ -59,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B1B1E3DA1D9352E700D6AD63 /* SwiftyJSON.framework in Embed Frameworks */,
+				7C55F5E51DB1A55100DC55EE /* SwiftyJSON.framework in Embed Frameworks */,
 				B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -71,6 +73,7 @@
 		1F118F4C2A3CE86E004221AB /* Pods_GWENT_BuilderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_BuilderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C92961926258F7B0E3F4FB /* Pods_GWENT_BuilderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_BuilderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB4F100A767D215D9221B65 /* Pods-GWENT-Builder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.debug.xcconfig"; sourceTree = "<group>"; };
+		7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-dhtuoxhihkdmazdfqinadzbxirih/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_Builder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9757A504546C0B1F259C65CF /* Pods-GWENT-Builder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.release.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.release.xcconfig"; sourceTree = "<group>"; };
 		B10951DB1D90437F00B0C125 /* GWENT-Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GWENT-Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */,
 				B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,9 +275,17 @@
 			name = "Main Controllers";
 			sourceTree = "<group>";
 		};
+		B1C3622A1D94A052008AB397 /* CardImages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CardImages;
+			sourceTree = "<group>";
+		};
 		D0C11550E3237626855FE913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */,
 				B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */,
 				B15E15FC1D919E5100130814 /* Pods_GWENT_BuilderUITests.framework */,
 				B15E15F21D90AD8600130814 /* gwentBusiness.framework */,
