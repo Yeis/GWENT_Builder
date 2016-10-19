@@ -1,4 +1,4 @@
-//
+///
 //  CardFinderController.swift
 //  GWENT-Builder
 //
@@ -10,17 +10,21 @@ import Foundation
 import UIKit
 import CoreData
 import gwentBusiness
-public class CardFinderController:UIViewController , UICollectionViewDelegate , UISearchBarDelegate , UICollectionViewDataSource
+public class CardFinderController:UIViewController , UICollectionViewDelegate , UISearchBarDelegate , UICollectionViewDataSource , UITableViewDataSource, UITableViewDelegate
 {
     //Variables 
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var navBar: UINavigationBar!
     var Cards:[Card] = [Card]()
     var FilteredCards:[Card] = [Card]()
     var Objects:[NSManagedObject]!
     var Selected:Int!
    //  let alert = UIAlertController(title:  "", message: "Fetching Database" , preferredStyle: UIAlertControllerStyle.alert)
     var searchActive:Bool = false
+    var buttonItem:UIBarButtonItem!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var searchView: UIView!
 
      override public func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +32,29 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
         collectionView!.dataSource = self
         collectionView!.delegate = self
         searchBar.delegate = self
+        tableView.delegate = self
+        tableView.dataSource =  self
+        self.automaticallyAdjustsScrollViewInsets = false
         let nib = UINib(nibName: "CardViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "CardCell")
+        let tablenib = UINib(nibName: "SearchViewCell", bundle: nil)
+        tableView.register(tablenib, forCellReuseIdentifier: "Cell")
+        self.title = "Card Finder"
+        //setup of searchView
+        let image = UIImage(named: "mobile-nav-icon-small")
+        buttonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(CardFinderController.ViewRight(time:)))
         
-        
-       // navigationController?.present(alert, animated: true, completion: nil)
+        self.navigationItem.leftBarButtonItem = buttonItem
+        //add gesture to searchview
+        let swipeleft = UISwipeGestureRecognizer(target: self, action: #selector(CardFinderController.SwipeLeft))
+        swipeleft.direction = UISwipeGestureRecognizerDirection.left
+        searchView.addGestureRecognizer(swipeleft)
+        //add gesture to keyboard 
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CardFinderController.dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
 
+        //fill searching objects array 
+        
         
         //load de los objetos en la base de datos
         let data = GWENT_Data()
@@ -58,9 +79,12 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
         collectionView.collectionViewLayout = layout
         
         collectionView.reloadData()
+        
+        ViewLeft(time: 0.0)
+
         //Debug
-//        debugPrint(collectionView.frame.size.width)
-//        debugPrint((collectionView.frame.size.height ) / 1.5 )
+        //debugPrint(collectionView.frame.size.width)
+        //debugPrint((collectionView.frame.size.height ) / 1.5 )
 
         
 
@@ -75,6 +99,66 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
     }
 
     
+    //MARK: UITableView Methods 
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        debugPrint("Section: " + String(indexPath.section) + " Row: " + String(indexPath.row))
+       // var cell = tableView.cellForRow(at: indexPath) as! SearchViewCell
+        //cell.backgroundColor = UIColor.white
+        
+
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchViewCell
+        //Types
+        if(indexPath.section == 0)
+        {
+            cell.lbOptionName.text = type.allValues[indexPath.row].description
+        }
+        //Faction
+        else if (indexPath.section == 1)
+        {
+            cell.lbOptionName.text = faction.allValues[indexPath.row].description
+        }
+        //Row
+        else if (indexPath.section == 2)
+        {
+            cell.lbOptionName.text = row.allValues[indexPath.row].description
+        }
+
+   
+        
+        return cell
+    }
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch (section)
+        {
+        case 0:
+            return type.count
+        case 1:
+            return faction.count
+        case 2:
+            return row.count
+        default:break
+        }
+        return 0
+    }
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch (section)
+        {
+        case 0:
+            return "Type"
+        case 1:
+            return "Faction"
+        case 2:
+            return "Row"
+        default: break
+        }
+        return ""
+    }
     //MARK: Metodos de UICollectionView
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(searchActive) {
@@ -156,6 +240,11 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
     
     
     //MARK: Metodos de searchBar
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
     }
@@ -174,6 +263,9 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
         if(searchBar.text?.characters.count == 0 ){
             searchActive = false;
         }
+        view.endEditing(true)
+
+        
     }
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -186,6 +278,52 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
             searchActive = true;
         }
         self.collectionView.reloadData()
+    }
+    
+    
+    //MARK: Search View Controls 
+    
+    
+    func SwipeLeft(gesture: UISwipeGestureRecognizer)
+    {
+        //hacer que se vaya para abajo con el swipe
+        //if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+        let swipeGesture = gesture
+        
+        switch swipeGesture.direction {
+        case UISwipeGestureRecognizerDirection.left:
+            ViewLeft(time: 0.5)
+        default:
+            break
+        }
+    }
+    
+    func ViewLeft(time:TimeInterval = 0.8)
+    {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let viewWidth = screenSize.width * 0.5
+        UIView.animate(withDuration: time, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { [weak self] in
+            self?.navigationItem.leftBarButtonItem?.isEnabled =  true
+
+        //    self?.navigationController?.view.bringSubview(toFront: (self?.navBar)!)
+
+            self!.searchView.frame.origin.x -= viewWidth //self!.view.bounds.height
+           // self!.tableview.alpha = 1.0
+            self!.view.layoutIfNeeded()
+            }, completion: nil)
+     
+    }
+    func ViewRight(time:TimeInterval = 1.0)
+    {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let viewWidth = screenSize.width * 0.5
+        UIView.animate(withDuration: time, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { [weak self] in
+            self?.navigationItem.leftBarButtonItem?.isEnabled =  false
+            self!.searchView.frame.origin.x += viewWidth //self!.view.bounds.height
+           // self!.tableview.alpha = 1.0
+            self!.view.layoutIfNeeded()
+            }, completion: nil)
+ 
     }
     
     

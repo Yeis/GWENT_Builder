@@ -19,4 +19,19 @@ public enum  type
     case Special
     case Troop
     
+    public var description : String {
+        switch self {
+        // Use Internationalization, as appropriate.
+        case .Character: return "Character"
+        case .Disloyal: return "Disloyal"
+        case .Hero  : return "Hero"
+        case .Leader: return "Leader"
+        case .Loyal: return "Loyal"
+        case .Special: return "Special"
+        case .Troop: return "Troop"
+   
+        }
+    }
+    public static let allValues = [Character, Disloyal, Hero,Leader,Loyal,Special,Troop]
+    public static var count: Int { return type.Troop.hashValue }
 }

@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		9CE1D844E4B2DD43E06AF0C1 /* Pods_gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5432C74E72B27FE5EE1F271A /* Pods_gwentBusiness.framework */; };
 		B133F5471D99BA3F004CE268 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133F5461D99BA3F004CE268 /* Artwork.swift */; };
+		B13B0CF61DB7FD3600601B6D /* row.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B0CF51DB7FD3600601B6D /* row.swift */; };
 		B15E15D91D909BCF00130814 /* gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15CF1D909BCF00130814 /* gwentBusiness.framework */; };
 		B15E15DE1D909BCF00130814 /* gwentBusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E15DD1D909BCF00130814 /* gwentBusinessTests.swift */; };
 		B15E15E01D909BCF00130814 /* gwentBusiness.h in Headers */ = {isa = PBXBuildFile; fileRef = B15E15D21D909BCF00130814 /* gwentBusiness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B15E15EA1D909F5900130814 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15E91D909F5900130814 /* Alamofire.framework */; };
 		B15E15FF1D91BCF100130814 /* REST_Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E15FE1D91BCF100130814 /* REST_Business.swift */; };
+		B171A7A61DB71533006F065B /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = B171A7A51DB71532006F065B /* Option.swift */; };
 		B1B1E3DC1D9353A500D6AD63 /* GWENT_JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3DB1D9353A500D6AD63 /* GWENT_JsonParser.swift */; };
 		B1C3622E1D94A713008AB397 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3622D1D94A713008AB397 /* User.swift */; };
 		B1D288AE1D91F630002B1E32 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288AD1D91F630002B1E32 /* Card.swift */; };
@@ -37,6 +39,7 @@
 		5432C74E72B27FE5EE1F271A /* Pods_gwentBusiness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gwentBusiness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C47952D9DFEA1AF1A1A447 /* Pods-gwentBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gwentBusiness.release.xcconfig"; path = "../Pods/Target Support Files/Pods-gwentBusiness/Pods-gwentBusiness.release.xcconfig"; sourceTree = "<group>"; };
 		B133F5461D99BA3F004CE268 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		B13B0CF51DB7FD3600601B6D /* row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = row.swift; sourceTree = "<group>"; };
 		B15E15CF1D909BCF00130814 /* gwentBusiness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = gwentBusiness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15E15D21D909BCF00130814 /* gwentBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gwentBusiness.h; sourceTree = "<group>"; };
 		B15E15D31D909BCF00130814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		B15E15E91D909F5900130814 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/Yeis/Documents/GWENT-Builder/Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<absolute>"; };
 		B15E15EB1D909F5E00130814 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "/Users/Yeis/Documents/GWENT-Builder/Pods/../build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<absolute>"; };
 		B15E15FE1D91BCF100130814 /* REST_Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST_Business.swift; sourceTree = "<group>"; };
+		B171A7A51DB71532006F065B /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		B1B1E3DB1D9353A500D6AD63 /* GWENT_JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWENT_JsonParser.swift; sourceTree = "<group>"; };
 		B1C3622D1D94A713008AB397 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B1D288AD1D91F630002B1E32 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				B1D288B61D91F937002B1E32 /* Glyph.swift */,
 				B1C3622D1D94A713008AB397 /* User.swift */,
 				B133F5461D99BA3F004CE268 /* Artwork.swift */,
+				B171A7A51DB71532006F065B /* Option.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				B1D288B01D91F713002B1E32 /* type.swift */,
 				B1D288B21D91F7DD002B1E32 /* faction.swift */,
 				B1D288B41D91F8D9002B1E32 /* rarity.swift */,
+				B13B0CF51DB7FD3600601B6D /* row.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -309,7 +315,9 @@
 			files = (
 				B1D288B31D91F7DD002B1E32 /* faction.swift in Sources */,
 				B1D288B51D91F8D9002B1E32 /* rarity.swift in Sources */,
+				B171A7A61DB71533006F065B /* Option.swift in Sources */,
 				B1D288B11D91F713002B1E32 /* type.swift in Sources */,
+				B13B0CF61DB7FD3600601B6D /* row.swift in Sources */,
 				B15E15FF1D91BCF100130814 /* REST_Business.swift in Sources */,
 				B1C3622E1D94A713008AB397 /* User.swift in Sources */,
 				B1D288B71D91F937002B1E32 /* Glyph.swift in Sources */,
