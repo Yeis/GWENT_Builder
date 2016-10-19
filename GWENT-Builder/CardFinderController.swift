@@ -17,7 +17,7 @@ public class CardFinderController:UIViewController , UICollectionViewDelegate , 
     var FilteredCards:[Card] = [Card]()
     var Objects:[NSManagedObject]!
     var Selected:Int!
-   //  let alert = UIAlertController(title:  "", message: "Fetching Database" , preferredStyle: UIAlertControllerStyle.alert)
+    //let alert = UIAlertController(title:  "", message: "Fetching Database" , preferredStyle: UIAlertControllerStyle.alert)
     var searchActive:Bool = false
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!

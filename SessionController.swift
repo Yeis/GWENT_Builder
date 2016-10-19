@@ -26,7 +26,7 @@ class SessionController
         let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
         if paths.count > 0
         {
-            if let dirPath = paths[0] as? String
+            if let dirPath = paths[0] as String?
             {
                 return dirPath + "/" + name
                 
