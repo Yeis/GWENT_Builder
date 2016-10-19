@@ -22,10 +22,6 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setup to change navigationbar 
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.barStyle = .blackTranslucent
-        self.title = "Home"
-        
         //get Card of the day
         let data = GWENT_Data()
         Objects = data.loadCards()
@@ -39,8 +35,7 @@ class HomeController: UIViewController {
             lbDescription.text =  Card.text
         }
         
-     
-        
+        self.title = "Home"
         
         // Do any additional setup after loading the view, typically from a nib.
         //SessionController.sharedInstance.REST.getCard(name: "alchemist")
@@ -64,6 +59,11 @@ class HomeController: UIViewController {
  //UIImage(
 //        SessionControler.sharedInstance.REST.DownloadImage(url: "https://api.gwentapi.com/media/blue-stripes-commando_small.png", callback: callbackDownload)
     
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    //    navigationItem.title = "Home"
+
     }
 
     override func didReceiveMemoryWarning() {

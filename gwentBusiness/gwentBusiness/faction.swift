@@ -16,4 +16,21 @@ public enum faction
     case Northern_Realms
     case Scoia_Tael
     case Skellige
+    
+    
+    public var description : String {
+        switch self {
+        // Use Internationalization, as appropriate.
+        case .Monsters: return "Monsters"
+        case .Neutral: return "Neutal"
+        case .Northern_Realms: return "Northern_Realms"
+        case .Scoia_Tael: return "Scoia_Tael"
+        case .Skellige: return "Skellige"
+            
+        }
+    }
+    
+    public static let allValues = [Monsters,Neutral,Northern_Realms , Scoia_Tael ,Skellige]
+    public static var count: Int { return faction.Skellige.hashValue }
+
 }
