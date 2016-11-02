@@ -22,7 +22,7 @@ public enum faction
         switch self {
         // Use Internationalization, as appropriate.
         case .Monsters: return "Monsters"
-        case .Neutral: return "Neutal"
+        case .Neutral: return "Neutral"
         case .Northern_Realms: return "Northern_Realms"
         case .Scoia_Tael: return "Scoia_Tael"
         case .Skellige: return "Skellige"

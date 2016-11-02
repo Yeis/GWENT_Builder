@@ -8,12 +8,14 @@
 
 import UIKit
 
-class CardViewCell: UICollectionViewCell {
+public class CardViewCell: UICollectionViewCell {
 
     @IBOutlet var image: UIImageView!
     @IBOutlet var lbName: UILabel!
     
-    override func awakeFromNib() {
+    //variable 
+    public var Id:Int!
+    override public func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
   

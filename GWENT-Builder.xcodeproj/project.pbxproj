@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48F2DAC91873C28C4DD9ABA9 /* Pods_GWENT_Builder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */; };
 		7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */; };
 		B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951DE1D90437F00B0C125 /* AppDelegate.swift */; };
 		B10951E11D90437F00B0C125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951E01D90437F00B0C125 /* ViewController.swift */; };
@@ -31,8 +32,16 @@
 		B1B1E3BE1D934C5C00D6AD63 /* CardFinderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3BD1D934C5C00D6AD63 /* CardFinderController.swift */; };
 		B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; };
 		B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1B593EA1DCA5DC600F4C9BB /* CardFinderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B593E91DCA5DC600F4C9BB /* CardFinderTableView.swift */; };
+		B1B593EC1DCA5E2500F4C9BB /* CardFinderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B593EB1DCA5E2500F4C9BB /* CardFinderCollectionView.swift */; };
+		B1B593EE1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B593ED1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift */; };
 		B1C362321D958C65008AB397 /* GWENT_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C362311D958C65008AB397 /* GWENT_Data.swift */; };
 		B1EB55B91DB536E900E8EF3F /* imageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EB55B81DB536E900E8EF3F /* imageController.swift */; };
+		B1EC33BD1DC933B800B697A7 /* CardSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC33BC1DC933B800B697A7 /* CardSelector.swift */; };
+		B1EC33BF1DC9386600B697A7 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; };
+		B1EC33C11DC9386A00B697A7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; };
+		B1EC33C21DC9387100B697A7 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1EC33C31DC9387500B697A7 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +68,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B1EC33C31DC9387500B697A7 /* RxCocoa.framework in Embed Frameworks */,
+				B1EC33C21DC9387100B697A7 /* RxSwift.framework in Embed Frameworks */,
 				B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -104,11 +115,17 @@
 		B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
 		B1B1E3BD1D934C5C00D6AD63 /* CardFinderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFinderController.swift; sourceTree = "<group>"; };
 		B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-bpiloyrznsqppldebnpyxssijtpj/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		B1B593E91DCA5DC600F4C9BB /* CardFinderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFinderTableView.swift; sourceTree = "<group>"; };
+		B1B593EB1DCA5E2500F4C9BB /* CardFinderCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFinderCollectionView.swift; sourceTree = "<group>"; };
+		B1B593ED1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFinderSearchBarController.swift; sourceTree = "<group>"; };
 		B1C362311D958C65008AB397 /* GWENT_Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GWENT_Data.swift; path = gwentBusiness/gwentBusiness/GWENT_Data.swift; sourceTree = SOURCE_ROOT; };
 		B1C362331D959733008AB397 /* GWENT_Builder0.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GWENT_Builder0.2.xcdatamodel; sourceTree = "<group>"; };
 		B1C362341D984789008AB397 /* GWENT_Builder0. 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GWENT_Builder0. 3.xcdatamodel"; sourceTree = "<group>"; };
 		B1EB55B71DB1A18500E8EF3F /* GWENT_Builder0. 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GWENT_Builder0. 4.xcdatamodel"; sourceTree = "<group>"; };
 		B1EB55B81DB536E900E8EF3F /* imageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageController.swift; sourceTree = "<group>"; };
+		B1EC33BC1DC933B800B697A7 /* CardSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSelector.swift; sourceTree = "<group>"; };
+		B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-bpiloyrznsqppldebnpyxssijtpj/Build/Products/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
+		B1EC33C01DC9386A00B697A7 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-bpiloyrznsqppldebnpyxssijtpj/Build/Products/Debug-iphoneos/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +133,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EC33C11DC9386A00B697A7 /* RxSwift.framework in Frameworks */,
+				B1EC33BF1DC9386600B697A7 /* RxCocoa.framework in Frameworks */,
 				7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */,
 				B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */,
+				48F2DAC91873C28C4DD9ABA9 /* Pods_GWENT_Builder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +235,8 @@
 		B15E15F11D90ACDE00130814 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B1B593E81DCA5D9900F4C9BB /* CardViewer */,
+				B1EC33BB1DC9338300B697A7 /* DeckBuilder */,
 				B15255831DB195DC00744A82 /* InfoReader */,
 				B15255821DB176D400744A82 /* Settings */,
 				B1B1E3DE1D9439A200D6AD63 /* Main Controllers */,
@@ -257,8 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				B1B1E3BD1D934C5C00D6AD63 /* CardFinderController.swift */,
-				B1764CBA1D9B4004003FE5AE /* CardViewer.swift */,
-				B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */,
+				B1B593E91DCA5DC600F4C9BB /* CardFinderTableView.swift */,
+				B1B593EB1DCA5E2500F4C9BB /* CardFinderCollectionView.swift */,
+				B1B593ED1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift */,
 			);
 			name = "Card Finder";
 			sourceTree = "<group>";
@@ -272,9 +295,28 @@
 			name = "Main Controllers";
 			sourceTree = "<group>";
 		};
+		B1B593E81DCA5D9900F4C9BB /* CardViewer */ = {
+			isa = PBXGroup;
+			children = (
+				B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */,
+				B1764CBA1D9B4004003FE5AE /* CardViewer.swift */,
+			);
+			name = CardViewer;
+			sourceTree = "<group>";
+		};
+		B1EC33BB1DC9338300B697A7 /* DeckBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				B1EC33BC1DC933B800B697A7 /* CardSelector.swift */,
+			);
+			name = DeckBuilder;
+			sourceTree = "<group>";
+		};
 		D0C11550E3237626855FE913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1EC33C01DC9386A00B697A7 /* RxSwift.framework */,
+				B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */,
 				7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */,
 				B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */,
 				B15E15FC1D919E5100130814 /* Pods_GWENT_BuilderUITests.framework */,
@@ -484,14 +526,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B593EC1DCA5E2500F4C9BB /* CardFinderCollectionView.swift in Sources */,
 				B171A7A31DB71400006F065B /* SearchViewCell.swift in Sources */,
 				B15255851DB196AC00744A82 /* Reader.swift in Sources */,
 				B1A4953E1D9F2110002B5ACE /* NewCardViewer.swift in Sources */,
 				B15255811DB176CE00744A82 /* SettingsController.swift in Sources */,
 				B1B1E3BB1D934A6300D6AD63 /* CardViewCell.swift in Sources */,
+				B1EC33BD1DC933B800B697A7 /* CardSelector.swift in Sources */,
 				B15E15F01D90ACD400130814 /* HomeController.swift in Sources */,
 				B1800F981D9C8FEF001D6D43 /* MessageHandler.swift in Sources */,
 				B10951E71D90437F00B0C125 /* GWENT_Builder.xcdatamodeld in Sources */,
+				B1B593EA1DCA5DC600F4C9BB /* CardFinderTableView.swift in Sources */,
 				B1A044791DB0264A00C34A7A /* gwentHelper.swift in Sources */,
 				B1EB55B91DB536E900E8EF3F /* imageController.swift in Sources */,
 				B10951E11D90437F00B0C125 /* ViewController.swift in Sources */,
@@ -500,6 +545,7 @@
 				B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */,
 				B15E16021D91CAC000130814 /* SessionController.swift in Sources */,
 				B1B1E3BE1D934C5C00D6AD63 /* CardFinderController.swift in Sources */,
+				B1B593EE1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

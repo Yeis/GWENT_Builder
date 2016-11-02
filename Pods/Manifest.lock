@@ -1,9 +1,14 @@
 PODS:
-  - Alamofire (4.0.0)
+  - Alamofire (4.0.1)
+  - RxCocoa (3.0.0):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
   - SwiftyJSON (from `https://github.com/BaiduHiDeviOS/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
@@ -17,9 +22,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/BaiduHiDeviOS/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
+  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SwiftyJSON: 6118fb49d7519c4d31a0c1f3d5af936e9047b556
 
-PODFILE CHECKSUM: 7ea5abe728353913bab5d884c249ce8cf1175588
+PODFILE CHECKSUM: 02aa1e882687879a42506265c32e43a1707b8783
 
 COCOAPODS: 1.1.0.rc.2
