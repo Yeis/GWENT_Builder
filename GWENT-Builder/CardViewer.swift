@@ -12,6 +12,7 @@ import UIKit
 import gwentBusiness
 class CardViewer:UIViewController
 {
+    // Outlets
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var lbRarity: UILabel!
     @IBOutlet var lbText: UILabel!
@@ -20,14 +21,17 @@ class CardViewer:UIViewController
     @IBOutlet var lbName: UILabel!
     @IBOutlet var image: UIImageView!
     @IBOutlet var tableview: UITableView!
-    //Variables 
+
+    // Variables
     var card:Card = Card()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       // navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(.PopRegresar))
 
-        //initialize setup
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        // navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(.PopRegresar))
+        
+        // initialize setup
         image.image = UIImage(contentsOfFile: SessionController.sharedInstance.GetImagePath(name: card.cover))
         
         lbName.text = card.name

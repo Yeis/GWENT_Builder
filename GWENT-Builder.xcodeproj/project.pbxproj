@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */; };
+		7C66C8801DB83E04003585D5 /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66C87F1DB83E04003585D5 /* DecksViewController.swift */; };
 		B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951DE1D90437F00B0C125 /* AppDelegate.swift */; };
 		B10951E11D90437F00B0C125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951E01D90437F00B0C125 /* ViewController.swift */; };
 		B10951E41D90437F00B0C125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10951E21D90437F00B0C125 /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		29C92961926258F7B0E3F4FB /* Pods_GWENT_BuilderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_BuilderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB4F100A767D215D9221B65 /* Pods-GWENT-Builder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.debug.xcconfig"; sourceTree = "<group>"; };
 		7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-dhtuoxhihkdmazdfqinadzbxirih/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		7C66C87F1DB83E04003585D5 /* DecksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
 		961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_Builder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9757A504546C0B1F259C65CF /* Pods-GWENT-Builder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.release.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.release.xcconfig"; sourceTree = "<group>"; };
 		B10951DB1D90437F00B0C125 /* GWENT-Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GWENT-Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C66C87C1DB83D0B003585D5 /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				7C66C87F1DB83E04003585D5 /* DecksViewController.swift */,
+			);
+			name = Decks;
+			sourceTree = "<group>";
+		};
 		B10951D21D90437F00B0C125 = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				B1A0447A1DB026CF00C34A7A /* Helpers */,
-				B1B1E3B81D934A3400D6AD63 /* Cells */,
 				B15E15F11D90ACDE00130814 /* ViewControllers */,
+				B1B1E3B81D934A3400D6AD63 /* Cells */,
 				B15E15ED1D90A9BE00130814 /* Assets.xcassets */,
 				B10951DE1D90437F00B0C125 /* AppDelegate.swift */,
 				B10951E21D90437F00B0C125 /* Main.storyboard */,
@@ -215,10 +225,11 @@
 		B15E15F11D90ACDE00130814 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B15255831DB195DC00744A82 /* InfoReader */,
-				B15255821DB176D400744A82 /* Settings */,
-				B1B1E3DE1D9439A200D6AD63 /* Main Controllers */,
 				B1B1E3DD1D94399200D6AD63 /* Card Finder */,
+				B1B1E3DE1D9439A200D6AD63 /* Main Controllers */,
+				B15255831DB195DC00744A82 /* InfoReader */,
+				7C66C87C1DB83D0B003585D5 /* Decks */,
+				B15255821DB176D400744A82 /* Settings */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -485,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B171A7A31DB71400006F065B /* SearchViewCell.swift in Sources */,
+				7C66C8801DB83E04003585D5 /* DecksViewController.swift in Sources */,
 				B15255851DB196AC00744A82 /* Reader.swift in Sources */,
 				B1A4953E1D9F2110002B5ACE /* NewCardViewer.swift in Sources */,
 				B15255811DB176CE00744A82 /* SettingsController.swift in Sources */,

@@ -11,7 +11,7 @@ import UIKit
 import gwentBusiness
 public class NewCardViewer:UIViewController
 {
-    //outlets
+    // outlets
     @IBOutlet var image: UIImageView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var lbName: UILabel!
@@ -21,56 +21,46 @@ public class NewCardViewer:UIViewController
     
     @IBOutlet var lbLane: UILabel!
     @IBOutlet var lbRarity: UILabel!
-    //variables
+
+    // variables
     var card:Card!
     
     public override func viewDidLoad() {
-        //navigationbar setup 
+        // navigationbar setup
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: nil, style: UIBarButtonItemStyle.plain, target: self, action: #selector(NewCardViewer.Popview))
 
-        
-        
-        //initial Setup
+        // initial Setup
         image.image = UIImage(contentsOfFile: SessionController.sharedInstance.GetImagePath(name: card.cover))
         lbName.text = card.name
         lbRarity.text = "Rarity: " + card.rarity
         lbLane.text = "Lane: "
         if card.rows.count == 0
         {
-            //es un event 
+            // es un event
             lbLane.text = "Lane: Event" 
         }
-        for row in card.rows
-        {
+        for row in card.rows {
             lbLane.text = lbLane.text! + " | " + row
         }
         lbText.text = card.text
         lbFaction.text = "Faction: " + card.faction
         lbType.text = "Type: " + card.type
         
-        //Setup for alternative images 
-        if  card.artwork.count == 1 || card.artwork.count == 0
-        {
+        // Setup for alternative images
+        if  card.artwork.count == 1 || card.artwork.count == 0 {
             segmentedControl.isUserInteractionEnabled = false
-            
         }
-        else
-        {
+        else {
             segmentedControl.removeAllSegments()
-            for i in 0...card.artwork.count
-            {
-                if i == 0
-                {
+            for i in 0...card.artwork.count {
+                if i == 0 {
                     segmentedControl.insertSegment(withTitle: "normal", at: i, animated: true)
                 }
-                else
-                {
+                else {
                     segmentedControl.insertSegment(withTitle: "alt " + String(i) , at: i, animated: true )
                 }
-                
             }
         }
-        
     }
     
     public override func didReceiveMemoryWarning() {
@@ -79,7 +69,4 @@ public class NewCardViewer:UIViewController
     func Popview(){
         navigationController!.popViewController(animated: true)
     }
-   
-    
-    
 }
