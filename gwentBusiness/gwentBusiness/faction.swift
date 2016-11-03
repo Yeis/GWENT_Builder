@@ -31,6 +31,6 @@ public enum faction
     }
     
     public static let allValues = [Monsters,Neutral,Northern_Realms , Scoia_Tael ,Skellige]
-    public static var count: Int { return faction.Skellige.hashValue }
+    public static var count: Int { return faction.Skellige.hashValue + 1  }
 
 }

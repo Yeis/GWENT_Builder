@@ -16,10 +16,17 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchViewCell
-        
         //Set Dynamic Width
+        if(cell.isSelected == true){
+            cell.backgroundColor = UIColor.white
+            cell.lbOptionName.textColor = UIColor.black
+        }
+        else if(cell.isSelected == false){
+            cell.backgroundColor = UIColor.black
+            cell.lbOptionName.textColor = UIColor.white
+        }
         cell.frame.size.width = (tableView.frame.size.width)
-        cell.backgroundColor = UIColor.black
+      
         //Types
         if(indexPath.section == 0)
         {
@@ -58,10 +65,10 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
         }
         return 0
     }
-    public func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch (section)
         {
         case 0:
@@ -75,48 +82,64 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
         return ""
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var cell = tableView.cellForRow(at: indexPath) as! SearchViewCell
-        if(cell.isSelected == false)
-        {
+        let cell = tableView.cellForRow(at: indexPath) as! SearchViewCell
+        if(cell.backgroundColor == UIColor.black){
             switch indexPath.section {
             case 0:
                 changeBackgroundColor(sectionLength: type.count,tableview: tableView , section: 0)
-                filtrado(parametro: cell.lbOptionName.text! , tipo: "faction")
+                filtrado(parametro: cell.lbOptionName.text! , tipo: "type")
                 
             case 1 :
                 changeBackgroundColor(sectionLength: faction.count,tableview: tableView , section: 1)
-                filtrado(parametro: cell.lbOptionName.text! , tipo: "row")
+                filtrado(parametro: cell.lbOptionName.text! , tipo: "faction")
                 
             case 2:
                 changeBackgroundColor(sectionLength: row.count,tableview: tableView , section: 2)
-                filtrado(parametro: cell.lbOptionName.text! , tipo: "type")
+                filtrado(parametro: cell.lbOptionName.text! , tipo: "row")
                 
             default:
                 break;
             }
-            cell.setSelected(true, animated: true)
-
+            tableView.selectRow(at: indexPath, animated: true, scrollPosition:            UITableViewScrollPosition.none)
+            cell.backgroundColor = UIColor.white
+            cell.lbOptionName.textColor = UIColor.black
+            filterActive =  true
         }
-        else
-        {
+        else{
+            tableView.deselectRow(at: indexPath, animated: true)
             cell.backgroundColor = UIColor.black
+            cell.lbOptionName.textColor = UIColor.white
             Filters[indexPath.section] = ""
+            armarQuery()
         }
     }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! SearchViewCell
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        cell.backgroundColor = UIColor.black
+        cell.lbOptionName.textColor = UIColor.white
+        Filters[indexPath.section] = ""
+        armarQuery()
+    }
+    
     func changeBackgroundColor(sectionLength:Int , tableview:UITableView , section:Int)
     {
-        var cell:UITableViewCell!
-        for i in 0...sectionLength
+        var cell:SearchViewCell!
+        for i in 0...(sectionLength - 1)
         {
-            cell = tableView.cellForRow(at: IndexPath(row: i, section: section))
-            cell?.setSelected(false, animated: true) 
+            cell = tableView.cellForRow(at: IndexPath(row: i, section: section)) as! SearchViewCell!
+            tableView.deselectRow(at: IndexPath(row: i, section: section), animated: true)
+            cell?.backgroundColor = UIColor.black
+            cell?.lbOptionName.textColor = UIColor.white
             
         }
     }
     func filtrado(parametro:String , tipo:String)
     {
+        filterActive = true 
         switch tipo {
         case "faction":
             Filters[0] = parametro
@@ -130,45 +153,39 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
         default:break;
         }
         armarQuery()
-        searchActive = true
         self.collectionView.reloadData()
     }
     func armarQuery()
     {
+        //Empty Case 
+        if(Filters[0] == "" && Filters[1] == "" && Filters[2] ==  ""){
+            filterActive =  false 
+        }
         //Simple Cases
-        if(Filters[0] != "" && Filters[1] == "" && Filters[2] ==  "")
-        {
-            FilteredCards = Cards.filter({ $0.faction == Filters[0]})
+        else if(Filters[0] != "" && Filters[1] == "" && Filters[2] ==  ""){
+            FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0]}) : FilteredCards.filter({ $0.faction == Filters[0]})
         }
-        else if(Filters[0] == "" && Filters[1] != "" && Filters[2] ==  "")
-        {
-            FilteredCards = Cards.filter({ $0.rows.contains(Filters[1])})
+        else if(Filters[0] == "" && Filters[1] != "" && Filters[2] ==  ""){
+             FilteredCards = searchActive ? Cards.filter({ $0.rows.contains(Filters[1])}) : FilteredCards.filter({ $0.rows.contains(Filters[1])})
         }
-        else if(Filters[0] == "" && Filters[1] == "" && Filters[2] !=  "")
-        {
-            FilteredCards = Cards.filter({ $0.type == Filters[2]})
-        }
+        else if(Filters[0] == "" && Filters[1] == "" && Filters[2] !=  ""){
+             FilteredCards = searchActive ? Cards.filter({ $0.type == Filters[2]}) : FilteredCards.filter({ $0.type == Filters[2]})        }
             //Advanced Cases
             //Filter by faction and row
-        else if(Filters[0] != "" && Filters[1] != "" && Filters[2] ==  "")
-        {
-            FilteredCards = Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1])})
+        else if(Filters[0] != "" && Filters[1] != "" && Filters[2] ==  ""){
+            FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1])}) : FilteredCards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1])})
         }
             //Filter by faction and type
-        else if(Filters[0] != "" && Filters[1] == "" && Filters[2] !=  "")
-        {
-            FilteredCards = Cards.filter({ $0.faction == Filters[0] &&  $0.type == Filters[2]})
+        else if(Filters[0] != "" && Filters[1] == "" && Filters[2] !=  ""){
+                FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0] &&  $0.type == Filters[2]}): FilteredCards.filter({ $0.faction == Filters[0] &&  $0.type == Filters[2]})
         }
             //Filter by row and type
-        else if(Filters[0] == "" && Filters[1] != "" && Filters[2] !=  "")
-        {
-            FilteredCards = Cards.filter({ $0.rows.contains(Filters[1])   && $0.type == Filters[2]})
+        else if(Filters[0] == "" && Filters[1] != "" && Filters[2] !=  ""){
+            FilteredCards = searchActive ? Cards.filter({ $0.rows.contains(Filters[1]) && $0.type == Filters[2]}) : FilteredCards.filter({ $0.rows.contains(Filters[1]) && $0.type == Filters[2]})
         }
             //Filter by all
-        else if(Filters[0] != "" && Filters[1] != "" && Filters[2] !=  "")
-        {
-            FilteredCards = Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1]) && $0.type == Filters[2]})
+        else if(Filters[0] != "" && Filters[1] != "" && Filters[2] !=  ""){
+            FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1]) && $0.type == Filters[2]}) : FilteredCards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1]) && $0.type == Filters[2]})        }
         }
-    }
 
 }

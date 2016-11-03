@@ -11,7 +11,7 @@ import Foundation
 
 public enum row
 {
-    case Attack
+    case Melee
     case Ranged
     case Siege
     case Event
@@ -21,7 +21,7 @@ public enum row
     public var description : String {
         switch self {
         // Use Internationalization, as appropriate.
-        case .Attack: return "Attack"
+        case .Melee: return "Melee"
         case .Ranged: return "Ranged"
         case .Siege: return "Siege"
         case .Event: return "Event"
@@ -30,8 +30,8 @@ public enum row
     }
     
     
-    public static let allValues = [Attack , Ranged  ,Siege ,  Event]
-    public static var count: Int { return row.Event.hashValue }
+    public static let allValues = [Melee , Ranged  ,Siege ,  Event]
+    public static var count: Int { return row.Event.hashValue + 1  }
     
     
 }

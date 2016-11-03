@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 import gwentBusiness
-public class CardFinderController:UIViewController 
+class CardFinderController:UIViewController
 {
     //MARK: Properties and Outlets
     @IBOutlet var tableView: UITableView!
@@ -24,6 +24,7 @@ public class CardFinderController:UIViewController
     var viewleft:Bool = true
     var buttonItem:UIBarButtonItem!
     var Filters:[String]!
+    var filterActive:Bool = false
     var searchBarNav:UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var searchView: UIView!

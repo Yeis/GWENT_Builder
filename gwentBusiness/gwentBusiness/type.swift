@@ -33,5 +33,5 @@ public enum  type
         }
     }
     public static let allValues = [Character, Disloyal, Hero,Leader,Loyal,Special,Troop]
-    public static var count: Int { return type.Troop.hashValue }
+    public static var count: Int { return type.Troop.hashValue  + 1 }
 }

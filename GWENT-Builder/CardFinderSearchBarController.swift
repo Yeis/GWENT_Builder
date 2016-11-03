@@ -44,8 +44,8 @@ extension CardFinderController:UISearchBarDelegate
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        FilteredCards = Cards.filter({ $0.name.contains(searchBar.text!)
-        })
+        FilteredCards =  filterActive ?  Cards.filter({ $0.name.contains(searchBar.text!)}) : FilteredCards.filter({ $0.name.contains(searchBar.text!)})
+        
         if(searchText.characters.count == 0){
             searchActive = false
         } else {
