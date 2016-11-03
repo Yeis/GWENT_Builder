@@ -11,9 +11,9 @@ import UIKit
 class Reader:UIViewController
 {
     @IBOutlet var Image: UIImageView!
-    
     @IBOutlet var lbTitle: UILabel!
     @IBOutlet var textView: UITextView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

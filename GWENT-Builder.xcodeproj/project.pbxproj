@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48F2DAC91873C28C4DD9ABA9 /* Pods_GWENT_Builder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */; };
+		7C52B30F1DCBA8A100F5D804 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C52B30E1DCBA8A100F5D804 /* RxSwift.framework */; };
+		7C52B3111DCBA8A300F5D804 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C52B3101DCBA8A300F5D804 /* RxCocoa.framework */; };
 		7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */; };
 		B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951DE1D90437F00B0C125 /* AppDelegate.swift */; };
 		B10951E11D90437F00B0C125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951E01D90437F00B0C125 /* ViewController.swift */; };
@@ -38,10 +40,6 @@
 		B1C362321D958C65008AB397 /* GWENT_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C362311D958C65008AB397 /* GWENT_Data.swift */; };
 		B1EB55B91DB536E900E8EF3F /* imageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EB55B81DB536E900E8EF3F /* imageController.swift */; };
 		B1EC33BD1DC933B800B697A7 /* CardSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC33BC1DC933B800B697A7 /* CardSelector.swift */; };
-		B1EC33BF1DC9386600B697A7 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; };
-		B1EC33C11DC9386A00B697A7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; };
-		B1EC33C21DC9387100B697A7 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1EC33C31DC9387500B697A7 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +66,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B1EC33C31DC9387500B697A7 /* RxCocoa.framework in Embed Frameworks */,
-				B1EC33C21DC9387100B697A7 /* RxSwift.framework in Embed Frameworks */,
 				B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -81,6 +77,8 @@
 		1F118F4C2A3CE86E004221AB /* Pods_GWENT_BuilderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_BuilderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C92961926258F7B0E3F4FB /* Pods_GWENT_BuilderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_BuilderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB4F100A767D215D9221B65 /* Pods-GWENT-Builder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.debug.xcconfig"; sourceTree = "<group>"; };
+		7C52B30E1DCBA8A100F5D804 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-dhtuoxhihkdmazdfqinadzbxirih/Build/Products/Debug-iphoneos/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
+		7C52B3101DCBA8A300F5D804 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-dhtuoxhihkdmazdfqinadzbxirih/Build/Products/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-dhtuoxhihkdmazdfqinadzbxirih/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWENT_Builder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9757A504546C0B1F259C65CF /* Pods-GWENT-Builder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWENT-Builder.release.xcconfig"; path = "Pods/Target Support Files/Pods-GWENT-Builder/Pods-GWENT-Builder.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,9 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1EC33C11DC9386A00B697A7 /* RxSwift.framework in Frameworks */,
-				B1EC33BF1DC9386600B697A7 /* RxCocoa.framework in Frameworks */,
 				7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */,
+				7C52B30F1DCBA8A100F5D804 /* RxSwift.framework in Frameworks */,
+				7C52B3111DCBA8A300F5D804 /* RxCocoa.framework in Frameworks */,
 				B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */,
 				48F2DAC91873C28C4DD9ABA9 /* Pods_GWENT_Builder.framework in Frameworks */,
 			);
@@ -315,6 +313,8 @@
 		D0C11550E3237626855FE913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C52B3101DCBA8A300F5D804 /* RxCocoa.framework */,
+				7C52B30E1DCBA8A100F5D804 /* RxSwift.framework */,
 				B1EC33C01DC9386A00B697A7 /* RxSwift.framework */,
 				B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */,
 				7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */,
@@ -404,7 +404,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Jose Carlos";
 				TargetAttributes = {
 					B10951DA1D90437F00B0C125 = {

@@ -85,7 +85,8 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! SearchViewCell
-        if(cell.backgroundColor == UIColor.black){
+        if(cell.isSelected == false)
+        {
             switch indexPath.section {
             case 0:
                 changeBackgroundColor(sectionLength: type.count,tableview: tableView , section: 0)

@@ -10,46 +10,45 @@ import UIKit
 import SwiftyJSON
 import gwentBusiness
 class SettingsController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    //MARK: Button Actions 
+    // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //      Get the new view controller using segue.destinationViewController.
+    //      Pass the selected object to the new view controller.
+    // }
+    //
+    // MARK: Button Actions
     
     @IBAction func deleteDataPress(_ sender: AnyObject)
     {
-        //delete all cards and images from the app
+        // delete all cards and images from the app
         let data = GWENT_Data()
-        data.deleteCards()        
+        data.deleteCards()
     }
+    
     @IBAction func downloadDataPress(_ sender: AnyObject)
     {
         SessionController.sharedInstance.REST.getAllCards(callback: Callback)
-
     }
-    //MARK : Download CallBack
+    
+    // MARK : Download CallBack
     func callbackDownload(jsonarray:JSON)
     {
-        //debugPrint(jsonarray)
+        // debugPrint(jsonarray)
     }
+    
     func Callback(jsonarray:JSON)
     {
         var cantidad :Int = 0
@@ -59,7 +58,6 @@ class SettingsController: UIViewController {
             {
                 cantidad += 1
                 SessionController.sharedInstance.REST.getHref(url: item["href"].stringValue, callback: CallbackHref)
-                
             }
             if cantidad == 95
             {
@@ -69,6 +67,7 @@ class SettingsController: UIViewController {
             }
         }
     }
+    
     func downloadImages(jsonarray:JSON , object:Any)
     {
         let card = object as! Card
@@ -77,17 +76,13 @@ class SettingsController: UIViewController {
         data.saveCard(card: card)
         
     }
+    
     func CallbackHref(jsonarray:JSON)
     {
-        
         let card = SessionController.sharedInstance.jsonParser.parseCard(json: jsonarray)
-        //todas las cartas ya estan metidas a la lista ahora nos traemos todos los artwork
+        // todas las cartas ya estan metidas a la lista ahora nos traemos todos los artwork
         
         SessionController.sharedInstance.REST.getArtwork(url: jsonarray["artwork"]["href"].stringValue, callback: downloadImages , card: card)
-        //   debugPrint("Downloading artwork of " + card.name )
-        
-        
+        // debugPrint("Downloading artwork of " + card.name )
     }
-    
-
 }

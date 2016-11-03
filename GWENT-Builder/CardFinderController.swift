@@ -19,7 +19,7 @@ class CardFinderController:UIViewController
     var FilteredCards:[Card] = [Card]()
     var Objects:[NSManagedObject]!
     var Selected:Int!
-    //let alert = UIAlertController(title:  "", message: "Fetching Database" , preferredStyle: UIAlertControllerStyle.alert)
+    // let alert = UIAlertController(title:  "", message: "Fetching Database" , preferredStyle: UIAlertControllerStyle.alert)
     var searchActive:Bool = false
     var viewleft:Bool = true
     var buttonItem:UIBarButtonItem!
@@ -83,12 +83,12 @@ class CardFinderController:UIViewController
     }
     private func SearchBarSetup(){
         //setup of searchView
-        let image = UIImage(named: "mobile-nav-icon-small")
-        buttonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(CardFinderController.ViewRight(time:)))
+        let image = UIImage(named: "menuicon")
+        buttonItem = UIBarButtonItem(image: imageController.imageResize(imageObj: image!), style: .plain, target: self, action: #selector(CardFinderController.ViewRight(time:)))
         searchBarNav = UISearchBar(frame: CGRect(x:0, y:0,width: 200, height: 20))
         searchBarNav.delegate = self
         searchBarNav.placeholder = "Search Card.."
-        searchBarNav.barStyle = UIBarStyle.black
+        searchBarNav.barStyle = UIBarStyle.default
         let NavBarItem = UIBarButtonItem(customView:searchBarNav)
         self.navigationItem.rightBarButtonItem = NavBarItem
         self.navigationItem.leftBarButtonItem = buttonItem
