@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		48F2DAC91873C28C4DD9ABA9 /* Pods_GWENT_Builder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961ABF0284FF95E289DC4617 /* Pods_GWENT_Builder.framework */; };
-		7C52B30F1DCBA8A100F5D804 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C52B30E1DCBA8A100F5D804 /* RxSwift.framework */; };
-		7C52B3111DCBA8A300F5D804 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C52B3101DCBA8A300F5D804 /* RxCocoa.framework */; };
-		7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C55F5E31DB1A54C00DC55EE /* SwiftyJSON.framework */; };
 		B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951DE1D90437F00B0C125 /* AppDelegate.swift */; };
 		B10951E11D90437F00B0C125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10951E01D90437F00B0C125 /* ViewController.swift */; };
 		B10951E41D90437F00B0C125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10951E21D90437F00B0C125 /* Main.storyboard */; };
@@ -27,12 +24,11 @@
 		B171A7A41DB71400006F065B /* SearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B171A7A21DB71400006F065B /* SearchViewCell.xib */; };
 		B1764CBB1D9B4004003FE5AE /* CardViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1764CBA1D9B4004003FE5AE /* CardViewer.swift */; };
 		B1800F981D9C8FEF001D6D43 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1800F971D9C8FEF001D6D43 /* MessageHandler.swift */; };
-		B1A044791DB0264A00C34A7A /* gwentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A044781DB0264A00C34A7A /* gwentHelper.swift */; };
+		B1A044791DB0264A00C34A7A /* GWENT_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A044781DB0264A00C34A7A /* GWENT_Helper.swift */; };
 		B1A4953E1D9F2110002B5ACE /* NewCardViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */; };
 		B1B1E3BB1D934A6300D6AD63 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3B91D934A6300D6AD63 /* CardViewCell.swift */; };
 		B1B1E3BC1D934A6300D6AD63 /* CardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */; };
 		B1B1E3BE1D934C5C00D6AD63 /* CardFinderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3BD1D934C5C00D6AD63 /* CardFinderController.swift */; };
-		B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; };
 		B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1B593EA1DCA5DC600F4C9BB /* CardFinderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B593E91DCA5DC600F4C9BB /* CardFinderTableView.swift */; };
 		B1B593EC1DCA5E2500F4C9BB /* CardFinderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B593EB1DCA5E2500F4C9BB /* CardFinderCollectionView.swift */; };
@@ -40,6 +36,17 @@
 		B1C362321D958C65008AB397 /* GWENT_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C362311D958C65008AB397 /* GWENT_Data.swift */; };
 		B1EB55B91DB536E900E8EF3F /* imageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EB55B81DB536E900E8EF3F /* imageController.swift */; };
 		B1EC33BD1DC933B800B697A7 /* CardSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC33BC1DC933B800B697A7 /* CardSelector.swift */; };
+		B1EF56821DCBC1690079BC6F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; };
+		B1EF56831DCBC16C0079BC6F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; };
+		B1EF56841DCBC16E0079BC6F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */; };
+		B1EF56861DCBC1710079BC6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EF56851DCBC1710079BC6F /* Alamofire.framework */; };
+		B1EF56871DCBC6330079BC6F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; };
+		B1EF56881DCBC6360079BC6F /* gwentBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E15F41D90B2AE00130814 /* gwentBusiness.framework */; };
+		B1EF56891DCBC6380079BC6F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */; };
+		B1EF568A1DCBC63C0079BC6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EF56851DCBC1710079BC6F /* Alamofire.framework */; };
+		B1EF568B1DCBC63F0079BC6F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; };
+		B1EF568E1DCBC9450079BC6F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1EF568F1DCBC94A0079BC6F /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B1EF568F1DCBC94A0079BC6F /* RxCocoa.framework in Embed Frameworks */,
+				B1EF568E1DCBC9450079BC6F /* RxSwift.framework in Embed Frameworks */,
 				B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -107,7 +116,7 @@
 		B171A7A21DB71400006F065B /* SearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewCell.xib; sourceTree = "<group>"; };
 		B1764CBA1D9B4004003FE5AE /* CardViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewer.swift; sourceTree = "<group>"; };
 		B1800F971D9C8FEF001D6D43 /* MessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
-		B1A044781DB0264A00C34A7A /* gwentHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gwentHelper.swift; sourceTree = "<group>"; };
+		B1A044781DB0264A00C34A7A /* GWENT_Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWENT_Helper.swift; sourceTree = "<group>"; };
 		B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCardViewer.swift; sourceTree = "<group>"; };
 		B1B1E3B91D934A6300D6AD63 /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
@@ -124,6 +133,7 @@
 		B1EC33BC1DC933B800B697A7 /* CardSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSelector.swift; sourceTree = "<group>"; };
 		B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-bpiloyrznsqppldebnpyxssijtpj/Build/Products/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		B1EC33C01DC9386A00B697A7 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-bpiloyrznsqppldebnpyxssijtpj/Build/Products/Debug-iphoneos/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
+		B1EF56851DCBC1710079BC6F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../Library/Developer/Xcode/DerivedData/GWENT-Builder-bpiloyrznsqppldebnpyxssijtpj/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +141,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C55F5E41DB1A54C00DC55EE /* SwiftyJSON.framework in Frameworks */,
-				7C52B30F1DCBA8A100F5D804 /* RxSwift.framework in Frameworks */,
-				7C52B3111DCBA8A300F5D804 /* RxCocoa.framework in Frameworks */,
-				B1B1E3CB1D93514C00D6AD63 /* gwentBusiness.framework in Frameworks */,
+				B1EF56861DCBC1710079BC6F /* Alamofire.framework in Frameworks */,
+				B1EF56841DCBC16E0079BC6F /* SwiftyJSON.framework in Frameworks */,
+				B1EF56831DCBC16C0079BC6F /* RxSwift.framework in Frameworks */,
+				B1EF56821DCBC1690079BC6F /* RxCocoa.framework in Frameworks */,
 				48F2DAC91873C28C4DD9ABA9 /* Pods_GWENT_Builder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +153,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EF568B1DCBC63F0079BC6F /* RxSwift.framework in Frameworks */,
+				B1EF568A1DCBC63C0079BC6F /* Alamofire.framework in Frameworks */,
+				B1EF56891DCBC6380079BC6F /* SwiftyJSON.framework in Frameworks */,
+				B1EF56881DCBC6360079BC6F /* gwentBusiness.framework in Frameworks */,
+				B1EF56871DCBC6330079BC6F /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C362311D958C65008AB397 /* GWENT_Data.swift */,
-				B1A044781DB0264A00C34A7A /* gwentHelper.swift */,
+				B1A044781DB0264A00C34A7A /* GWENT_Helper.swift */,
 				B1EB55B81DB536E900E8EF3F /* imageController.swift */,
 			);
 			name = Helpers;
@@ -313,6 +328,7 @@
 		D0C11550E3237626855FE913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1EF56851DCBC1710079BC6F /* Alamofire.framework */,
 				7C52B3101DCBA8A300F5D804 /* RxCocoa.framework */,
 				7C52B30E1DCBA8A100F5D804 /* RxSwift.framework */,
 				B1EC33C01DC9386A00B697A7 /* RxSwift.framework */,
@@ -537,7 +553,7 @@
 				B1800F981D9C8FEF001D6D43 /* MessageHandler.swift in Sources */,
 				B10951E71D90437F00B0C125 /* GWENT_Builder.xcdatamodeld in Sources */,
 				B1B593EA1DCA5DC600F4C9BB /* CardFinderTableView.swift in Sources */,
-				B1A044791DB0264A00C34A7A /* gwentHelper.swift in Sources */,
+				B1A044791DB0264A00C34A7A /* GWENT_Helper.swift in Sources */,
 				B1EB55B91DB536E900E8EF3F /* imageController.swift in Sources */,
 				B10951E11D90437F00B0C125 /* ViewController.swift in Sources */,
 				B1764CBB1D9B4004003FE5AE /* CardViewer.swift in Sources */,
@@ -692,7 +708,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6AB4F100A767D215D9221B65 /* Pods-GWENT-Builder.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -716,7 +731,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9757A504546C0B1F259C65CF /* Pods-GWENT-Builder.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
