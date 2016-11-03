@@ -411,6 +411,7 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = P2797J2J9D;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					B10951F11D90437F00B0C125 = {
 						CreatedOnToolsVersion = 7.3;
