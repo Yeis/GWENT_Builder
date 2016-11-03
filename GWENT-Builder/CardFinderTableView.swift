@@ -84,8 +84,9 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        filterActive = true
         let cell = tableView.cellForRow(at: indexPath) as! SearchViewCell
-        if(cell.isSelected == false)
+        if(cell.backgroundColor == UIColor.black)
         {
             switch indexPath.section {
             case 0:
@@ -106,8 +107,7 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
             tableView.selectRow(at: indexPath, animated: true, scrollPosition:            UITableViewScrollPosition.none)
             cell.backgroundColor = UIColor.white
             cell.lbOptionName.textColor = UIColor.black
-            filterActive =  true
-        }
+         }
         else{
             tableView.deselectRow(at: indexPath, animated: true)
             cell.backgroundColor = UIColor.black
@@ -140,7 +140,6 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
     }
     func filtrado(parametro:String , tipo:String)
     {
-        filterActive = true 
         switch tipo {
         case "faction":
             Filters[0] = parametro
@@ -164,29 +163,29 @@ extension CardFinderController: UITableViewDataSource, UITableViewDelegate
         }
         //Simple Cases
         else if(Filters[0] != "" && Filters[1] == "" && Filters[2] ==  ""){
-            FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0]}) : FilteredCards.filter({ $0.faction == Filters[0]})
+            FilteredCards = !searchActive ? Cards.filter({ $0.faction == Filters[0]}) : FilteredCards.filter({ $0.faction == Filters[0]})
         }
         else if(Filters[0] == "" && Filters[1] != "" && Filters[2] ==  ""){
-             FilteredCards = searchActive ? Cards.filter({ $0.rows.contains(Filters[1])}) : FilteredCards.filter({ $0.rows.contains(Filters[1])})
+             FilteredCards = !searchActive ? Cards.filter({ $0.rows.contains(Filters[1])}) : FilteredCards.filter({ $0.rows.contains(Filters[1])})
         }
         else if(Filters[0] == "" && Filters[1] == "" && Filters[2] !=  ""){
-             FilteredCards = searchActive ? Cards.filter({ $0.type == Filters[2]}) : FilteredCards.filter({ $0.type == Filters[2]})        }
+             FilteredCards = !searchActive ? Cards.filter({ $0.type == Filters[2]}) : FilteredCards.filter({ $0.type == Filters[2]})        }
             //Advanced Cases
             //Filter by faction and row
         else if(Filters[0] != "" && Filters[1] != "" && Filters[2] ==  ""){
-            FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1])}) : FilteredCards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1])})
+            FilteredCards = !searchActive ? Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1])}) : FilteredCards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1])})
         }
             //Filter by faction and type
         else if(Filters[0] != "" && Filters[1] == "" && Filters[2] !=  ""){
-                FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0] &&  $0.type == Filters[2]}): FilteredCards.filter({ $0.faction == Filters[0] &&  $0.type == Filters[2]})
+                FilteredCards = !searchActive ? Cards.filter({ $0.faction == Filters[0] &&  $0.type == Filters[2]}): FilteredCards.filter({ $0.faction == Filters[0] &&  $0.type == Filters[2]})
         }
             //Filter by row and type
         else if(Filters[0] == "" && Filters[1] != "" && Filters[2] !=  ""){
-            FilteredCards = searchActive ? Cards.filter({ $0.rows.contains(Filters[1]) && $0.type == Filters[2]}) : FilteredCards.filter({ $0.rows.contains(Filters[1]) && $0.type == Filters[2]})
+            FilteredCards = !searchActive ? Cards.filter({ $0.rows.contains(Filters[1]) && $0.type == Filters[2]}) : FilteredCards.filter({ $0.rows.contains(Filters[1]) && $0.type == Filters[2]})
         }
             //Filter by all
         else if(Filters[0] != "" && Filters[1] != "" && Filters[2] !=  ""){
-            FilteredCards = searchActive ? Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1]) && $0.type == Filters[2]}) : FilteredCards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1]) && $0.type == Filters[2]})        }
+            FilteredCards = !searchActive ? Cards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1]) && $0.type == Filters[2]}) : FilteredCards.filter({ $0.faction == Filters[0] && $0.rows.contains(Filters[1]) && $0.type == Filters[2]})        }
         }
 
 }

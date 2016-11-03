@@ -19,6 +19,7 @@ extension CardFinderController:UISearchBarDelegate
         searchBarNav.resignFirstResponder()
     }
     public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        ViewLeft(time: 0.8)
         searchActive = true;
     }
     
@@ -44,7 +45,11 @@ extension CardFinderController:UISearchBarDelegate
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        FilteredCards =  filterActive ?  Cards.filter({ $0.name.contains(searchBar.text!)}) : FilteredCards.filter({ $0.name.contains(searchBar.text!)})
+        searchActive = false
+        armarQuery()
+        if(searchText != ""){
+        FilteredCards =  !filterActive ?  Cards.filter({ $0.name.contains(searchBar.text!)}) : FilteredCards.filter({ $0.name.contains(searchBar.text!)})
+        }
         
         if(searchText.characters.count == 0){
             searchActive = false
@@ -85,6 +90,7 @@ extension CardFinderController:UISearchBarDelegate
     }
     func ViewRight(time:TimeInterval)
     {
+         dismissKeyboard()
         let screenSize: CGRect = UIScreen.main.bounds
         let viewWidth = screenSize.width * 0.5
         UIView.animate(withDuration: time, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { [weak self] in

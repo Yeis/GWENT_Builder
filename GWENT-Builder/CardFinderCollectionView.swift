@@ -15,7 +15,7 @@ extension CardFinderController:UICollectionViewDataSource , UICollectionViewDele
     
     //MARK: Metodos de UICollectionView
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if(searchActive) {
+        if(searchActive || filterActive) {
             return FilteredCards.count
         }
         return Cards.count
@@ -39,7 +39,7 @@ extension CardFinderController:UICollectionViewDataSource , UICollectionViewDele
         
         
         //Cell data
-        if (searchActive)
+        if (searchActive || filterActive)
         {
             cell.lbName.text = (FilteredCards[indexPath.item].name)
             cell.image.image = UIImage(contentsOfFile:  SessionController.sharedInstance.GetImagePath(name: FilteredCards[indexPath.item].cover)  )
