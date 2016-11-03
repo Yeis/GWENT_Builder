@@ -31,6 +31,27 @@ class GWENT_BuilderUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }
+    func testLoadCardFinder()
+    {
+        let app = XCUIApplication()
+        XCUIDevice.shared().orientation = .portrait
+        app.tabBars.buttons["Card Finder"].tap()
+        let collectionCells = app.collectionViews.cells.count
+        XCTAssertEqual(collectionCells, 95, "found Instead \(collectionCells)")
+
+    }
+    func testCardViewer()
+    {
+        let app = XCUIApplication()
+        let alchemistScrollView = app.scrollViews.containing(.staticText, identifier:"Alchemist").element
+        alchemistScrollView.tap()
+        let rarityCommonStaticText = app.staticTexts["Rarity: Common"]
+        rarityCommonStaticText.swipeDown()
+        rarityCommonStaticText.tap()
+        alchemistScrollView.swipeUp()
+        
     }
     
 }

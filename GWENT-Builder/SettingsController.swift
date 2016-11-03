@@ -62,7 +62,7 @@ class SettingsController: UIViewController {
             if cantidad == 95
             {
                 // Se supone que ya descargamos todo y que las tarjetas ya fueron traidas
-                SessionController.sharedInstance.messageHandler.showMessage(title: "Cards", message: "Download Complete", nav: self.navigationController!)
+                // SessionController.sharedInstance.messageHandler.showMessage(title: "Cards", message: "Download Complete", nav: self.navigationController!)
             }
         }
     }
