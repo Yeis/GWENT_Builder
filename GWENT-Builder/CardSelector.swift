@@ -9,10 +9,13 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import gwentBusiness
 class CardSelector: UIViewController {
     //properties
     @IBOutlet var tableView: UITableView!
     var searchBarNav:UISearchBar!
+    var Cards:[Card] = [Card]()
+    var Deck:[Card] = [Card]()
 
 
     override func viewDidLoad() {
@@ -38,14 +41,19 @@ class CardSelector: UIViewController {
         let NavBarItem = UIBarButtonItem(customView:searchBarNav)
         self.navigationItem.rightBarButtonItem = NavBarItem
     }
+    func tableViewSetup()
+    {
+        tableView.delegate =  self
+        tableView.dataSource =  self
+        let tablenib = UINib(nibName: "SearchViewCell", bundle: nil)
+        tableView.register(tablenib, forCellReuseIdentifier: "Cell")
+    }
     
     
     //MARK: RX Functions
-    func tableViewSetup()
+    private func setupCellConfiguration()
     {
-        
     }
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
