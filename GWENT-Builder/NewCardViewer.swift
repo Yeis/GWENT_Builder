@@ -24,11 +24,11 @@ public class NewCardViewer:UIViewController
 
     // variables
     var card:Card!
+    var deckMode:Bool!
     
     public override func viewDidLoad() {
         // navigationbar setup
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: nil, style: UIBarButtonItemStyle.plain, target: self, action: #selector(NewCardViewer.Popview))
-
         // initial Setup
         image.image = UIImage(contentsOfFile: SessionController.sharedInstance.GetImagePath(name: card.cover))
         lbName.text = card.name
@@ -66,6 +66,31 @@ public class NewCardViewer:UIViewController
     public override func didReceiveMemoryWarning() {
         debugPrint("We are short on memory")
     }
+    
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        //mandar mensaje para ver el status
+        if deckMode == true {
+            navBarSetup()
+        }
+        else
+        {
+            self.navigationItem.rightBarButtonItem = nil 
+        }
+    }
+    
+    func navBarSetup(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addCard))
+        
+    }
+    
+    func addCard(){
+        //Append current card
+        SessionController.sharedInstance.currentDeck.Cards.append(card)
+    }
+    
+    
+    
     func Popview(){
         navigationController!.popViewController(animated: true)
     }

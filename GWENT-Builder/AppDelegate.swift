@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
         //llenamos las opciones 
         SessionController.sharedInstance.fillOptions()
+        SessionController.sharedInstance.fillCards()
         
         //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
        // UINavigationBar.appearance().barTintColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
