@@ -45,8 +45,6 @@
 		B1EF56891DCBC6380079BC6F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B1E3D71D9352C600D6AD63 /* SwiftyJSON.framework */; };
 		B1EF568A1DCBC63C0079BC6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EF56851DCBC1710079BC6F /* Alamofire.framework */; };
 		B1EF568B1DCBC63F0079BC6F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; };
-		B1EF568E1DCBC9450079BC6F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33C01DC9386A00B697A7 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1EF568F1DCBC94A0079BC6F /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +71,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B1EF568F1DCBC94A0079BC6F /* RxCocoa.framework in Embed Frameworks */,
-				B1EF568E1DCBC9450079BC6F /* RxSwift.framework in Embed Frameworks */,
 				B1B1E3CC1D93514C00D6AD63 /* gwentBusiness.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";

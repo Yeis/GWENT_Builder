@@ -29,9 +29,9 @@ public enum  type
         case .Loyal: return "Loyal"
         case .Special: return "Special"
         case .Troop: return "Troop"
-   
         }
     }
+    
     public static let allValues = [Character, Disloyal, Hero,Leader,Loyal,Special,Troop]
     public static var count: Int { return type.Troop.hashValue  + 1 }
 }

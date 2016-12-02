@@ -28,7 +28,6 @@ public class NewCardViewer:UIViewController
     public override func viewDidLoad() {
         // navigationbar setup
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: nil, style: UIBarButtonItemStyle.plain, target: self, action: #selector(NewCardViewer.Popview))
-
         // initial Setup
         image.image = UIImage(contentsOfFile: SessionController.sharedInstance.GetImagePath(name: card.cover))
         lbName.text = card.name

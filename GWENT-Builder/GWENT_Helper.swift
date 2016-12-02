@@ -20,7 +20,7 @@ public class gwentHelper
     
     public func getlocalCard(item:NSManagedObject)->Card
     {
-        //verify that the helper are empty
+        //verify that the helpers are empty
         artworksHelper.removeAll()
         rowsHelper.removeAll()
         subtypesHelper.removeAll()
@@ -28,12 +28,14 @@ public class gwentHelper
         let artworkSet = item.mutableSetValue(forKey: "artworks")
         let subtypeSet = item.mutableSetValue(forKey: "subtypes")
         let rowSet = item.mutableSetValue(forKey: "rows")
+        
         artworkSet.forEach(procesarArtwork)
         subtypeSet.forEach(procesarSubtypes)
         rowSet.forEach(procesarRows)
         
         return Card(_name: item.value(forKey: "name") as! String, _artwork: artworksHelper, _faction: item.value(forKey: "faction") as! String, _rarity: item.value(forKey: "rarity") as! String, _subtypes: subtypesHelper, _rows: rowsHelper, _text: item.value(forKey: "text") as! String, _type: item.value(forKey: "type") as! String , _cover: artworksHelper[0])
     }
+    
     //helper functions
     func procesarArtwork(art:Any)
     {

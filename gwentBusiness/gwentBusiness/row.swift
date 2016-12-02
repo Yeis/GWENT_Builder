@@ -25,13 +25,9 @@ public enum row
         case .Ranged: return "Ranged"
         case .Siege: return "Siege"
         case .Event: return "Event"
-            
         }
     }
     
-    
     public static let allValues = [Melee , Ranged  ,Siege ,  Event]
     public static var count: Int { return row.Event.hashValue + 1  }
-    
-    
 }

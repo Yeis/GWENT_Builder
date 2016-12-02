@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SessionController.sharedInstance.fillOptions()
         
         //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-       // UINavigationBar.appearance().barTintColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
-     //   UINavigationBar.appearance().tintColor = UIColor.white
-    //    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-     //   UINavigationBar.appearance().backgroundColor = UIColor.black
+        //UINavigationBar.appearance().barTintColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+        //UINavigationBar.appearance().tintColor = UIColor.white
+        //UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        //UINavigationBar.appearance().backgroundColor = UIColor.black
 
         return true
     }
