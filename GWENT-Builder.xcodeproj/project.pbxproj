@@ -25,6 +25,8 @@
 		B1764CBB1D9B4004003FE5AE /* CardViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1764CBA1D9B4004003FE5AE /* CardViewer.swift */; };
 		B1800F981D9C8FEF001D6D43 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1800F971D9C8FEF001D6D43 /* MessageHandler.swift */; };
 		B1A044791DB0264A00C34A7A /* GWENT_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A044781DB0264A00C34A7A /* GWENT_Helper.swift */; };
+		B1A31BA81DD2A85800D300B4 /* CardSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A31BA61DD2A85800D300B4 /* CardSelectorCell.swift */; };
+		B1A31BA91DD2A85800D300B4 /* CardSelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A31BA71DD2A85800D300B4 /* CardSelectorCell.xib */; };
 		B1A4953E1D9F2110002B5ACE /* NewCardViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */; };
 		B1B1E3BB1D934A6300D6AD63 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3B91D934A6300D6AD63 /* CardViewCell.swift */; };
 		B1B1E3BC1D934A6300D6AD63 /* CardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */; };
@@ -34,6 +36,9 @@
 		B1B593EC1DCA5E2500F4C9BB /* CardFinderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B593EB1DCA5E2500F4C9BB /* CardFinderCollectionView.swift */; };
 		B1B593EE1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B593ED1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift */; };
 		B1C362321D958C65008AB397 /* GWENT_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C362311D958C65008AB397 /* GWENT_Data.swift */; };
+		B1D79D3F1DCD095000A204FC /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79D3E1DCD095000A204FC /* PageContainer.swift */; };
+		B1DB047A1DCC2A550019EE28 /* CardSelectorPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB04791DCC2A550019EE28 /* CardSelectorPageController.swift */; };
+		B1DB047C1DCC2B6A0019EE28 /* DeckCardSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB047B1DCC2B6A0019EE28 /* DeckCardSelector.swift */; };
 		B1EB55B91DB536E900E8EF3F /* imageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EB55B81DB536E900E8EF3F /* imageController.swift */; };
 		B1EC33BD1DC933B800B697A7 /* CardSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC33BC1DC933B800B697A7 /* CardSelector.swift */; };
 		B1EF56821DCBC1690079BC6F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EC33BE1DC9386600B697A7 /* RxCocoa.framework */; };
@@ -113,6 +118,8 @@
 		B1764CBA1D9B4004003FE5AE /* CardViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewer.swift; sourceTree = "<group>"; };
 		B1800F971D9C8FEF001D6D43 /* MessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
 		B1A044781DB0264A00C34A7A /* GWENT_Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWENT_Helper.swift; sourceTree = "<group>"; };
+		B1A31BA61DD2A85800D300B4 /* CardSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSelectorCell.swift; sourceTree = "<group>"; };
+		B1A31BA71DD2A85800D300B4 /* CardSelectorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardSelectorCell.xib; sourceTree = "<group>"; };
 		B1A4953D1D9F2110002B5ACE /* NewCardViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCardViewer.swift; sourceTree = "<group>"; };
 		B1B1E3B91D934A6300D6AD63 /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
@@ -124,6 +131,9 @@
 		B1C362311D958C65008AB397 /* GWENT_Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GWENT_Data.swift; path = gwentBusiness/gwentBusiness/GWENT_Data.swift; sourceTree = SOURCE_ROOT; };
 		B1C362331D959733008AB397 /* GWENT_Builder0.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GWENT_Builder0.2.xcdatamodel; sourceTree = "<group>"; };
 		B1C362341D984789008AB397 /* GWENT_Builder0. 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GWENT_Builder0. 3.xcdatamodel"; sourceTree = "<group>"; };
+		B1D79D3E1DCD095000A204FC /* PageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContainer.swift; sourceTree = "<group>"; };
+		B1DB04791DCC2A550019EE28 /* CardSelectorPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSelectorPageController.swift; sourceTree = "<group>"; };
+		B1DB047B1DCC2B6A0019EE28 /* DeckCardSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckCardSelector.swift; sourceTree = "<group>"; };
 		B1EB55B71DB1A18500E8EF3F /* GWENT_Builder0. 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GWENT_Builder0. 4.xcdatamodel"; sourceTree = "<group>"; };
 		B1EB55B81DB536E900E8EF3F /* imageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageController.swift; sourceTree = "<group>"; };
 		B1EC33BC1DC933B800B697A7 /* CardSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSelector.swift; sourceTree = "<group>"; };
@@ -171,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				B15E16001D91CAB200130814 /* Session */,
-				B15E15F41D90B2AE00130814 /* gwentBusiness.framework */,
 				B10951DD1D90437F00B0C125 /* GWENT-Builder */,
 				B10951F51D90437F00B0C125 /* GWENT-BuilderTests */,
 				B10952001D90437F00B0C125 /* GWENT-BuilderUITests */,
@@ -245,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B593E81DCA5D9900F4C9BB /* CardViewer */,
-				B1EC33BB1DC9338300B697A7 /* DeckBuilder */,
+				B1EC33BB1DC9338300B697A7 /* CardSelector */,
 				B15255831DB195DC00744A82 /* InfoReader */,
 				B15255821DB176D400744A82 /* Settings */,
 				B1B1E3DE1D9439A200D6AD63 /* Main Controllers */,
@@ -280,6 +289,8 @@
 				B1B1E3BA1D934A6300D6AD63 /* CardViewCell.xib */,
 				B171A7A11DB71400006F065B /* SearchViewCell.swift */,
 				B171A7A21DB71400006F065B /* SearchViewCell.xib */,
+				B1A31BA61DD2A85800D300B4 /* CardSelectorCell.swift */,
+				B1A31BA71DD2A85800D300B4 /* CardSelectorCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -313,17 +324,29 @@
 			name = CardViewer;
 			sourceTree = "<group>";
 		};
-		B1EC33BB1DC9338300B697A7 /* DeckBuilder */ = {
+		B1D79D401DCD0EB200A204FC /* PageControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1EC33BC1DC933B800B697A7 /* CardSelector.swift */,
+				B1DB04791DCC2A550019EE28 /* CardSelectorPageController.swift */,
+				B1D79D3E1DCD095000A204FC /* PageContainer.swift */,
 			);
-			name = DeckBuilder;
+			name = PageControllers;
+			sourceTree = "<group>";
+		};
+		B1EC33BB1DC9338300B697A7 /* CardSelector */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79D401DCD0EB200A204FC /* PageControllers */,
+				B1EC33BC1DC933B800B697A7 /* CardSelector.swift */,
+				B1DB047B1DCC2B6A0019EE28 /* DeckCardSelector.swift */,
+			);
+			name = CardSelector;
 			sourceTree = "<group>";
 		};
 		D0C11550E3237626855FE913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B15E15F41D90B2AE00130814 /* gwentBusiness.framework */,
 				B1EF56851DCBC1710079BC6F /* Alamofire.framework */,
 				7C52B3101DCBA8A300F5D804 /* RxCocoa.framework */,
 				7C52B30E1DCBA8A100F5D804 /* RxSwift.framework */,
@@ -462,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A31BA91DD2A85800D300B4 /* CardSelectorCell.xib in Resources */,
 				B10951EC1D90437F00B0C125 /* LaunchScreen.storyboard in Resources */,
 				B15E15EE1D90A9BE00130814 /* Assets.xcassets in Resources */,
 				B1B1E3BC1D934A6300D6AD63 /* CardViewCell.xib in Resources */,
@@ -539,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DB047A1DCC2A550019EE28 /* CardSelectorPageController.swift in Sources */,
 				B1B593EC1DCA5E2500F4C9BB /* CardFinderCollectionView.swift in Sources */,
 				B171A7A31DB71400006F065B /* SearchViewCell.swift in Sources */,
 				B15255851DB196AC00744A82 /* Reader.swift in Sources */,
@@ -548,6 +573,7 @@
 				B1EC33BD1DC933B800B697A7 /* CardSelector.swift in Sources */,
 				B15E15F01D90ACD400130814 /* HomeController.swift in Sources */,
 				B1800F981D9C8FEF001D6D43 /* MessageHandler.swift in Sources */,
+				B1A31BA81DD2A85800D300B4 /* CardSelectorCell.swift in Sources */,
 				B10951E71D90437F00B0C125 /* GWENT_Builder.xcdatamodeld in Sources */,
 				B1B593EA1DCA5DC600F4C9BB /* CardFinderTableView.swift in Sources */,
 				B1A044791DB0264A00C34A7A /* GWENT_Helper.swift in Sources */,
@@ -557,7 +583,9 @@
 				B1C362321D958C65008AB397 /* GWENT_Data.swift in Sources */,
 				B10951DF1D90437F00B0C125 /* AppDelegate.swift in Sources */,
 				B15E16021D91CAC000130814 /* SessionController.swift in Sources */,
+				B1DB047C1DCC2B6A0019EE28 /* DeckCardSelector.swift in Sources */,
 				B1B1E3BE1D934C5C00D6AD63 /* CardFinderController.swift in Sources */,
+				B1D79D3F1DCD095000A204FC /* PageContainer.swift in Sources */,
 				B1B593EE1DCA5E7E00F4C9BB /* CardFinderSearchBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

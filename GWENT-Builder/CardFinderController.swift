@@ -39,12 +39,13 @@ class CardFinderController:UIViewController
         GesturesSetup()
         Filters = ["" , "" , ""]
         //load de los objetos en la base de datos
-        let data = GWENT_Data()
-        let helper = gwentHelper()
-        Objects = data.loadCards()
-        for item in Objects{
-            Cards.append(helper.getlocalCard(item: item))
-        }
+//        let data = GWENT_Data()
+//        let helper = gwentHelper()
+//        Objects = data.loadCards()
+//        for item in Objects{
+//            Cards.append(helper.getlocalCard(item: item))
+//        }
+        Cards =  SessionController.sharedInstance.GetSharedCards()
         collectionView.reloadData()
     }
     public override func viewDidAppear(_ animated: Bool) {
@@ -62,6 +63,7 @@ class CardFinderController:UIViewController
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "NewCardViewer"){
             let svc = segue.destination as! NewCardViewer
+            svc.deckMode = false
             if(searchActive){
                 svc.card = FilteredCards[Selected]
             }

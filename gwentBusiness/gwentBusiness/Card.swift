@@ -22,6 +22,8 @@ public class Card
     public var text:String!
     public var type:String!
     
+    //mientras 
+    public var quantity:Int? = 0
     public init(){}
     
     public init(_name:String  , _artwork:[String] , _faction:String , _rarity:String , _subtypes:[String] , _rows:[String]  ,  _text:String , _type:String , _cover:String)

@@ -8,8 +8,8 @@
 
 import Foundation
 import gwentBusiness
-
-
+import CoreData
+import RxSwift
 class SessionController
 {
     public init(){}
@@ -18,7 +18,11 @@ class SessionController
     var REST:REST_Business = REST_Business()
     var jsonParser:GWENT_JsonParser = GWENT_JsonParser()
     var messageHandler:MessageHandler = MessageHandler()
-    
+    var Cards = [Card]()
+    var currentDeck =  Deck()
+    //var currentDeck:Observable<Deck>!
+
+
     
     
     //Session Variables 
@@ -56,6 +60,21 @@ class SessionController
         {
             searchingOptions.append(Option(_name: item.description))
         }
+    }
+    public func fillCards()
+    {
+        let data = GWENT_Data()
+        let helper = gwentHelper()
+        let Objects:[NSManagedObject]  = data.loadCards()
+        for item in Objects{
+            Cards.append(helper.getlocalCard(item: item))
+        }
+
+    }
+    
+    public func GetSharedCards()->[Card]
+    {
+        return self.Cards
     }
     
     

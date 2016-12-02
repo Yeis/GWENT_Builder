@@ -23,6 +23,7 @@
 		B1D288B31D91F7DD002B1E32 /* faction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B21D91F7DD002B1E32 /* faction.swift */; };
 		B1D288B51D91F8D9002B1E32 /* rarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B41D91F8D9002B1E32 /* rarity.swift */; };
 		B1D288B71D91F937002B1E32 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B61D91F937002B1E32 /* Glyph.swift */; };
+		B1F42F441DDBDFCB0032F20C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F42F431DDBDFCB0032F20C /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B1D288B21D91F7DD002B1E32 /* faction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faction.swift; sourceTree = "<group>"; };
 		B1D288B41D91F8D9002B1E32 /* rarity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rarity.swift; sourceTree = "<group>"; };
 		B1D288B61D91F937002B1E32 /* Glyph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
+		B1F42F431DDBDFCB0032F20C /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		BABDAE771B1170AE8F87315D /* Pods-gwentBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gwentBusiness.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-gwentBusiness/Pods-gwentBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				B1C3622D1D94A713008AB397 /* User.swift */,
 				B133F5461D99BA3F004CE268 /* Artwork.swift */,
 				B171A7A51DB71532006F065B /* Option.swift */,
+				B1F42F431DDBDFCB0032F20C /* Deck.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F42F441DDBDFCB0032F20C /* Deck.swift in Sources */,
 				B1D288B31D91F7DD002B1E32 /* faction.swift in Sources */,
 				B1D288B51D91F8D9002B1E32 /* rarity.swift in Sources */,
 				B171A7A61DB71533006F065B /* Option.swift in Sources */,
