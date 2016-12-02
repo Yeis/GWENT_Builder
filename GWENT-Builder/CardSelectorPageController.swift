@@ -17,9 +17,6 @@ class CardSelectorPageController:UIPageViewController
     var pageViewControllers:[UIViewController] =
        [ UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DeckCardSelector") , UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CardSelector") ]
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self

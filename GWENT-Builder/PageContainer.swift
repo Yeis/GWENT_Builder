@@ -18,21 +18,19 @@ class PageContainer: UIViewController
             cardSelectorPageController?.selectorDelegate = self
         }
     }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Deck"
+        containerView.backgroundColor = UIColor.lightGray
         pageControl.addTarget(self, action: #selector(PageContainer.didChangePageControlValue), for: .valueChanged)
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let PageViewController = segue.destination as? CardSelectorPageController {
             PageViewController.selectorDelegate = self
         }
     }
-    
     
     func didChangePageControlValue() {
         cardSelectorPageController?.scrollToViewController(index: pageControl.currentPage)
@@ -50,6 +48,12 @@ extension PageContainer: CardSelectorPageControllerDelegate
     func PageViewController(PageViewController: CardSelectorPageController,
                                     didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
+        if index == 0{
+            title = "Deck"
+        }
+        else{
+            title = "Card Selector"
+        }
     }
     
     

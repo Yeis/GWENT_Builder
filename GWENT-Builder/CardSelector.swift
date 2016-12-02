@@ -14,18 +14,17 @@ class CardSelector: UIViewController {
     //properties
     @IBOutlet var tableView: UITableView!
     var searchBarNav:UISearchBar!
-    var Cards = Variable<[Card]>([])
-    var Deck:[Card] = [Card]()
     let disposeBag =  DisposeBag()
     var Selected:Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Card Select"
         // Do any additional setup after loading the view.
         SearchBarSetup()
         tableViewSetup()
-        Cards.value = SessionController.sharedInstance.GetSharedCards()
+        //Load de todas las cartas por el momento 
+        SessionController.sharedInstance.availableCards.value = SessionController.sharedInstance.GetSharedCards()
         setupCellConfiguration()
         
     
@@ -62,12 +61,11 @@ class CardSelector: UIViewController {
     
     private func setupCellConfiguration()
     {
-        Cards.asObservable().bindTo(tableView
+        SessionController.sharedInstance.availableCards.asObservable().bindTo(tableView
         .rx
             .items(cellIdentifier:  CardSelectorCell.Identifier , cellType: CardSelectorCell.self))
             { row , card , cell in
                 cell.configureWithCard(card: card)
-                
         }.addDisposableTo(disposeBag)
         
         tableView.rx.itemSelected
@@ -75,6 +73,8 @@ class CardSelector: UIViewController {
                 self.Selected = indexPath.row
                 self.performSegue(withIdentifier: "NewCardViewer", sender: nil)
             }).addDisposableTo(disposeBag)
+        
+        
         
         
         
@@ -88,7 +88,7 @@ class CardSelector: UIViewController {
         if(segue.identifier == "NewCardViewer"){
             let svc = segue.destination as! NewCardViewer
             svc.deckMode = true
-            svc.card = Cards.value[Selected]
+            svc.card = SessionController.sharedInstance.availableCards.value[Selected]
         }
     }
     

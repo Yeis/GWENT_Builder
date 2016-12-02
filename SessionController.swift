@@ -18,8 +18,14 @@ class SessionController
     var REST:REST_Business = REST_Business()
     var jsonParser:GWENT_JsonParser = GWENT_JsonParser()
     var messageHandler:MessageHandler = MessageHandler()
+    //total Cards
     var Cards = [Card]()
+    //current editing deck
     var currentDeck =  Deck()
+    //Deck card
+    var deckCards = Variable<[Card]>([])
+    var availableCards = Variable<[Card]>([])
+
     //var currentDeck:Observable<Deck>!
 
 

@@ -7,11 +7,12 @@
 //
 
 import Foundation
-
 public class Deck
 {
     var name:String!
     public var Cards:[Card] = [Card]()
+    
+    
     
     public init(){}
     public init(_name:String)

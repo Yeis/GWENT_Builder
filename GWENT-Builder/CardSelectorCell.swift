@@ -68,10 +68,10 @@ class CardSelectorCell: UITableViewCell {
         Quantity.value = Quantity.value + 1
         
         //Add card to deck 
-        if ( SessionController.sharedInstance.currentDeck.Cards.count > 0 &&   SessionController.sharedInstance.currentDeck.Cards.contains{ $0.name == self.Card.name  })
+        if ( SessionController.sharedInstance.deckCards.value.count > 0 &&   SessionController.sharedInstance.deckCards.value.contains{ $0.name == self.Card.name  })  
         {
             //it exists 
-            _ = SessionController.sharedInstance.currentDeck.Cards.map{
+            _ = SessionController.sharedInstance.deckCards.value.map{
                 if($0.name == self.Card.name){
                     $0.quantity = $0.quantity! + 1
                 }
@@ -81,14 +81,25 @@ class CardSelectorCell: UITableViewCell {
         {
             let cardToBeAdded = self.Card
             cardToBeAdded?.quantity = self.Quantity.value
-            SessionController.sharedInstance.currentDeck.Cards.append(cardToBeAdded!)
+            SessionController.sharedInstance.deckCards.value.append(cardToBeAdded!)
         }
         
     }
     
     @IBAction func removeOnePress(_ sender: AnyObject) {
-        Quantity.value =  Quantity.value - 1
-
+        //check if Quantity is less than zero 
+        if(Quantity.value > 0){
+            Quantity.value =  Quantity.value - 1
+            //if the value now is zero we erase the card from the list 
+            _ = SessionController.sharedInstance.deckCards.value.map{
+                if($0.name == self.Card.name){
+                    $0.quantity = $0.quantity! -  1
+                }
+            }
+                if(Quantity.value == 0 ){
+                    SessionController.sharedInstance.deckCards.value  = SessionController.sharedInstance.deckCards.value.filter{ $0.name != self.Card.name  }
+                }
+        }
     }
     
     
