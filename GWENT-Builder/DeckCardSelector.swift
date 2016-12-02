@@ -17,7 +17,7 @@ class DeckCardSelector:UIViewController
     @IBOutlet var tableview: UITableView!
     var searchBarNav:UISearchBar!
     let disposeBag = DisposeBag()
-    
+    var Selected:Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
@@ -50,15 +50,30 @@ class DeckCardSelector:UIViewController
     
     private func setupCellConfiguration()
     {
-         Observable.of(SessionController.sharedInstance.currentDeck.Cards ).bindTo(tableview
+         SessionController.sharedInstance.deckCards.asObservable().bindTo(tableview
             .rx
             .items(cellIdentifier:  CardSelectorCell.Identifier , cellType: CardSelectorCell.self))
         { row , card , cell in
             cell.configureWithCard(card: card)
             }.addDisposableTo(disposeBag)
         
+        tableview.rx.itemSelected
+            .subscribe(onNext: { indexPath in
+                self.Selected = indexPath.row
+                self.performSegue(withIdentifier: "NewCardViewer", sender: nil)
+            }).addDisposableTo(disposeBag)
+
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  
+        if(segue.identifier == "NewCardViewer"){
+            let svc = segue.destination as! NewCardViewer
+            svc.deckMode = true
+            svc.card = SessionController.sharedInstance.deckCards.value[Selected]
+        }
+    }
+    
     
 }
 extension DeckCardSelector: UISearchBarDelegate

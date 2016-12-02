@@ -17,6 +17,7 @@
 		B15E15FF1D91BCF100130814 /* REST_Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E15FE1D91BCF100130814 /* REST_Business.swift */; };
 		B171A7A61DB71533006F065B /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = B171A7A51DB71532006F065B /* Option.swift */; };
 		B1B1E3DC1D9353A500D6AD63 /* GWENT_JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1E3DB1D9353A500D6AD63 /* GWENT_JsonParser.swift */; };
+		B1C077941DEE481800975F2E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C077931DEE481800975F2E /* RxSwift.framework */; };
 		B1C3622E1D94A713008AB397 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3622D1D94A713008AB397 /* User.swift */; };
 		B1D288AE1D91F630002B1E32 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288AD1D91F630002B1E32 /* Card.swift */; };
 		B1D288B11D91F713002B1E32 /* type.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D288B01D91F713002B1E32 /* type.swift */; };
@@ -52,6 +53,7 @@
 		B15E15FE1D91BCF100130814 /* REST_Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST_Business.swift; sourceTree = "<group>"; };
 		B171A7A51DB71532006F065B /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		B1B1E3DB1D9353A500D6AD63 /* GWENT_JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWENT_JsonParser.swift; sourceTree = "<group>"; };
+		B1C077931DEE481800975F2E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../DerivedData/GWENT-Builder/Build/Products/Debug-iphoneos/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		B1C3622D1D94A713008AB397 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B1D288AD1D91F630002B1E32 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B1D288B01D91F713002B1E32 /* type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = type.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C077941DEE481800975F2E /* RxSwift.framework in Frameworks */,
 				B15E15EA1D909F5900130814 /* Alamofire.framework in Frameworks */,
 				9CE1D844E4B2DD43E06AF0C1 /* Pods_gwentBusiness.framework in Frameworks */,
 			);
@@ -95,6 +98,7 @@
 		514C4C0A52EC6FD29847AB4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1C077931DEE481800975F2E /* RxSwift.framework */,
 				B15E15EB1D909F5E00130814 /* SwiftyJSON.framework */,
 				B15E15E91D909F5900130814 /* Alamofire.framework */,
 				5432C74E72B27FE5EE1F271A /* Pods_gwentBusiness.framework */,
